@@ -1,0 +1,14 @@
+"use client";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { id } from "@/lib/i18n";
+import { leadFormSchema, type Lead, type LeadInput } from "@/lib/design/models";
+import { Button } from "../ui/button";
+import { DesignDialog, DesignField } from "./common";
+
+const d = id.design;
+export function LeadForm({ record, owner, onClose, onSave }: { record?: Lead; owner: string; onClose: () => void; onSave: (input: LeadInput) => void }) {
+  const { register, handleSubmit, setError, formState: { errors, isSubmitting } } = useForm<LeadInput>({ resolver: zodResolver(leadFormSchema), defaultValues: record || { contact: "", organization: "", email: "", phone: "", owner, source: "WEBSITE", potential: 0, description: "" } });
+  const field = (name: "contact" | "organization" | "email" | "phone" | "owner", label: string, required = false, type = "text") => <DesignField name={`lead-${name}`} label={label} required={required} error={errors[name]?.message}><input className="field" id={`lead-${name}`} type={type} maxLength={name === "phone" ? 40 : 160} autoComplete="off" aria-required={required} aria-invalid={!!errors[name]} aria-describedby={errors[name] ? `lead-${name}-error` : undefined} {...register(name)} /></DesignField>;
+  return <DesignDialog title={`${record ? d.edit : d.add} Lead`} description={d.leadInfo} onClose={onClose}><form noValidate className="space-y-5" onSubmit={handleSubmit(input => { try { onSave(input); } catch (error) { setError("root", { message: error instanceof Error ? error.message : d.saveError }); } })}><div className="grid gap-4 sm:grid-cols-2">{field("contact", d.contact, true)}{field("organization", d.organization, true)}{field("email", id.email, false, "email")}{field("phone", id.phone)}{field("owner", d.owner, true)}<DesignField name="lead-source" label={d.source}><select className="field" id="lead-source" {...register("source")}>{Object.entries(d.leadSource).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></DesignField><DesignField name="lead-potential" label={d.potential} error={errors.potential?.message}><input className="field" id="lead-potential" type="number" min="0" max="100000000" step="0.01" aria-invalid={!!errors.potential} {...register("potential", { valueAsNumber: true })} /></DesignField></div><DesignField name="lead-description" label={id.description} error={errors.description?.message}><textarea className="field min-h-24" id="lead-description" maxLength={1200} {...register("description")} /></DesignField>{errors.root && <p role="alert" className="text-sm text-red-600">{errors.root.message}</p>}<div className="flex justify-end gap-2 border-t pt-4"><Button type="button" variant="outline" onClick={onClose}>{id.cancel}</Button><Button disabled={isSubmitting} type="submit">{id.save}</Button></div></form></DesignDialog>;
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "noEmit": false,
+    "incremental": false,
+    "rootDir": ".",
+    "outDir": "../../.local/test-build/web",
+    "plugins": [],
+    "jsx": "react-jsx"
+  },
+  "include": ["test/**/*.tsx", "src/components/workspace-provider.tsx"],
+  "exclude": ["node_modules", ".next"]
+}

@@ -1,0 +1,8126 @@
+[
+  {
+    "command": "node.create",
+    "as": "canvas",
+    "params": {
+      "type": "frame",
+      "name": "02 / Apple-inspired — Liquid Glass",
+      "x": 0,
+      "y": 1660,
+      "width": 1920,
+      "height": 1440,
+      "props": {
+        "fill": "#F5F6FA",
+        "clip": true
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer1",
+    "params": {
+      "type": "ellipse",
+      "name": "Ambient / blue behind navigation",
+      "x": -180,
+      "y": 50,
+      "width": 480,
+      "height": 700,
+      "props": {
+        "fill": "#DDE9FD",
+        "opacity": 0.5,
+        "effects": [
+          {
+            "type": "layerBlur",
+            "radius": 100
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer2",
+    "params": {
+      "type": "ellipse",
+      "name": "Ambient / toolbar light",
+      "x": 1380,
+      "y": -150,
+      "width": 520,
+      "height": 290,
+      "props": {
+        "fill": "#DCE9FF",
+        "opacity": 0.65,
+        "effects": [
+          {
+            "type": "layerBlur",
+            "radius": 90
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer3",
+    "params": {
+      "type": "frame",
+      "name": "Navigation / floating sidebar",
+      "x": 20,
+      "y": 20,
+      "width": 272,
+      "height": 1400,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer4",
+    "params": {
+      "type": "rectangle",
+      "name": "Material / Sidebar",
+      "x": 0,
+      "y": 0,
+      "width": 272,
+      "height": 1400,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 28,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer4"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer5",
+    "params": {
+      "type": "frame",
+      "name": "Boxes",
+      "x": 24,
+      "y": 31,
+      "width": 27,
+      "height": 27,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer6",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "M 3.3413 14.535 A 2.25 2.25 0 0 0 2.25 16.4588 v 3.645 a 2.25 2.25 0 0 0 1.0913 1.9238 l 3.375 2.025 a 2.25 2.25 0 0 0 2.3175 0 L 13.5 21.375 v -6.1875 l -5.625 -3.375 -4.5338 2.7225 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer7",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "m 7.875 18.5625 -5.3325 -3.2063"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer8",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "m 7.875 18.5625 5.625 -3.375"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer9",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "M 7.875 18.5625 v 5.8163"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer10",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "M 13.5 15.1875 V 21.375 l 4.4663 2.6775 a 2.25 2.25 0 0 0 2.3175 0 l 3.375 -2.025 a 2.25 2.25 0 0 0 1.0913 -1.9237 v -3.645 a 2.25 2.25 0 0 0 -1.0912 -1.9237 L 19.125 11.8125 l -5.625 3.375 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer11",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "m 19.125 18.5625 -5.625 -3.375"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer12",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "m 19.125 18.5625 5.3325 -3.2063"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer13",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "M 19.125 18.5625 v 5.8163"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer14",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "M 8.9663 4.9725 A 2.25 2.25 0 0 0 7.875 6.8963 v 4.9163 l 5.625 3.375 5.625 -3.375 V 6.8963 a 2.25 2.25 0 0 0 -1.0912 -1.9237 l -3.375 -2.025 a 2.25 2.25 0 0 0 -2.3175 0 l -3.375 2.025 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer15",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "M 13.5 9 8.1675 5.7938"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer16",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "m 13.5 9 5.3325 -3.2063"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer17",
+    "params": {
+      "type": "vector",
+      "name": "Boxes path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.9124999999999999
+      },
+      "parent": {
+        "$ref": "layer5"
+      },
+      "select": false,
+      "path": "M 13.5 15.1875 V 9"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer18",
+    "params": {
+      "type": "text",
+      "name": "Enterprise",
+      "x": 62,
+      "y": 32,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 21,
+        "fill": "#20232B",
+        "letterSpacing": -0.35
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Enterprise",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer19",
+    "params": {
+      "type": "text",
+      "name": "ERP",
+      "x": 170,
+      "y": 34,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 19,
+        "fill": "#9096A3"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "ERP",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer20",
+    "params": {
+      "type": "rectangle",
+      "name": "Company workspace",
+      "x": 16,
+      "y": 100,
+      "width": 240,
+      "height": 82,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 20,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer20"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer21",
+    "params": {
+      "type": "rectangle",
+      "name": "Company emblem",
+      "x": 31,
+      "y": 118,
+      "width": 42,
+      "height": 42,
+      "props": {
+        "fill": "#E6F0FF",
+        "cornerRadius": 13
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer22",
+    "params": {
+      "type": "frame",
+      "name": "Building2",
+      "x": 42,
+      "y": 129,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer23",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer22"
+      },
+      "select": false,
+      "path": "M 5 18.3333 V 3.3333 a 1.6667 1.6667 0 0 1 1.6667 -1.6667 h 6.6667 a 1.6667 1.6667 0 0 1 1.6667 1.6667 v 15 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer24",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer22"
+      },
+      "select": false,
+      "path": "M 5 10 H 3.3333 a 1.6667 1.6667 0 0 0 -1.6667 1.6667 v 5 a 1.6667 1.6667 0 0 0 1.6667 1.6667 h 1.6667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer25",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer22"
+      },
+      "select": false,
+      "path": "M 15 7.5 h 1.6667 a 1.6667 1.6667 0 0 1 1.6667 1.6667 v 7.5 a 1.6667 1.6667 0 0 1 -1.6667 1.6667 h -1.6667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer26",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer22"
+      },
+      "select": false,
+      "path": "M 8.3333 5 h 3.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer27",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer22"
+      },
+      "select": false,
+      "path": "M 8.3333 8.3333 h 3.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer28",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer22"
+      },
+      "select": false,
+      "path": "M 8.3333 11.6667 h 3.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer29",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer22"
+      },
+      "select": false,
+      "path": "M 8.3333 15 h 3.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer30",
+    "params": {
+      "type": "text",
+      "name": "PT Alpha Distribusi",
+      "x": 85,
+      "y": 119,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 13,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "PT Alpha Distribusi",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer31",
+    "params": {
+      "type": "text",
+      "name": "Enterprise Workspace",
+      "x": 85,
+      "y": 141,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 10.5,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Enterprise Workspace",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer32",
+    "params": {
+      "type": "frame",
+      "name": "ChevronsUpDown",
+      "x": 226,
+      "y": 131,
+      "width": 14,
+      "height": 14,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer33",
+    "params": {
+      "type": "vector",
+      "name": "ChevronsUpDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 0.9916666666666667
+      },
+      "parent": {
+        "$ref": "layer32"
+      },
+      "select": false,
+      "path": "m 4.0833 8.75 2.9167 2.9167 2.9167 -2.9167"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer34",
+    "params": {
+      "type": "vector",
+      "name": "ChevronsUpDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 0.9916666666666667
+      },
+      "parent": {
+        "$ref": "layer32"
+      },
+      "select": false,
+      "path": "m 4.0833 5.25 2.9167 -2.9167 2.9167 2.9167"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer35",
+    "params": {
+      "type": "text",
+      "name": "WORKSPACE",
+      "x": 28,
+      "y": 208,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 10,
+        "fill": "#8A909C"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "WORKSPACE",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer36",
+    "params": {
+      "type": "rectangle",
+      "name": "Current module / Dashboard",
+      "x": 16,
+      "y": 238,
+      "width": 240,
+      "height": 48,
+      "props": {
+        "fill": "#E5EFFF",
+        "cornerRadius": 15
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer37",
+    "params": {
+      "type": "frame",
+      "name": "LayoutDashboard",
+      "x": 32,
+      "y": 252,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer38",
+    "params": {
+      "type": "vector",
+      "name": "LayoutDashboard path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer37"
+      },
+      "select": false,
+      "path": "M 2.5 2.5 h 5.8333 v 7.5 h -5.8333 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer39",
+    "params": {
+      "type": "vector",
+      "name": "LayoutDashboard path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer37"
+      },
+      "select": false,
+      "path": "M 11.6667 2.5 h 5.8333 v 4.1667 h -5.8333 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer40",
+    "params": {
+      "type": "vector",
+      "name": "LayoutDashboard path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer37"
+      },
+      "select": false,
+      "path": "M 11.6667 10 h 5.8333 v 7.5 h -5.8333 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer41",
+    "params": {
+      "type": "vector",
+      "name": "LayoutDashboard path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#007AFF",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer37"
+      },
+      "select": false,
+      "path": "M 2.5 13.3333 h 5.8333 v 4.1667 h -5.8333 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer42",
+    "params": {
+      "type": "text",
+      "name": "Dashboard",
+      "x": 66,
+      "y": 252,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 14,
+        "fill": "#007AFF"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Dashboard",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer43",
+    "params": {
+      "type": "text",
+      "name": "MODUL",
+      "x": 28,
+      "y": 310,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 10,
+        "fill": "#8A909C"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "MODUL",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer44",
+    "params": {
+      "type": "frame",
+      "name": "Building2",
+      "x": 32,
+      "y": 352,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer45",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer44"
+      },
+      "select": false,
+      "path": "M 5 18.3333 V 3.3333 a 1.6667 1.6667 0 0 1 1.6667 -1.6667 h 6.6667 a 1.6667 1.6667 0 0 1 1.6667 1.6667 v 15 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer46",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer44"
+      },
+      "select": false,
+      "path": "M 5 10 H 3.3333 a 1.6667 1.6667 0 0 0 -1.6667 1.6667 v 5 a 1.6667 1.6667 0 0 0 1.6667 1.6667 h 1.6667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer47",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer44"
+      },
+      "select": false,
+      "path": "M 15 7.5 h 1.6667 a 1.6667 1.6667 0 0 1 1.6667 1.6667 v 7.5 a 1.6667 1.6667 0 0 1 -1.6667 1.6667 h -1.6667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer48",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer44"
+      },
+      "select": false,
+      "path": "M 8.3333 5 h 3.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer49",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer44"
+      },
+      "select": false,
+      "path": "M 8.3333 8.3333 h 3.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer50",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer44"
+      },
+      "select": false,
+      "path": "M 8.3333 11.6667 h 3.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer51",
+    "params": {
+      "type": "vector",
+      "name": "Building2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer44"
+      },
+      "select": false,
+      "path": "M 8.3333 15 h 3.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer52",
+    "params": {
+      "type": "text",
+      "name": "Organization",
+      "x": 66,
+      "y": 354,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Organization",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer53",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 357,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer54",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer53"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer55",
+    "params": {
+      "type": "frame",
+      "name": "Database",
+      "x": 32,
+      "y": 404,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer56",
+    "params": {
+      "type": "vector",
+      "name": "Database path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer55"
+      },
+      "select": false,
+      "path": "M 2.5 4.1667 a 7.5 2.5 0 1 0 15 0 a 7.5 2.5 0 1 0 -15 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer57",
+    "params": {
+      "type": "vector",
+      "name": "Database path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer55"
+      },
+      "select": false,
+      "path": "M 2.5 4.1667 V 15.8333 A 7.5 2.5 0 0 0 17.5 15.8333 V 4.1667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer58",
+    "params": {
+      "type": "vector",
+      "name": "Database path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer55"
+      },
+      "select": false,
+      "path": "M 2.5 10 A 7.5 2.5 0 0 0 17.5 10"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer59",
+    "params": {
+      "type": "text",
+      "name": "Master Data",
+      "x": 66,
+      "y": 406,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Master Data",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer60",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 409,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer61",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer60"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer62",
+    "params": {
+      "type": "frame",
+      "name": "ShoppingCart",
+      "x": 32,
+      "y": 456,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer63",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingCart path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer62"
+      },
+      "select": false,
+      "path": "M 5.8333 17.5 a 0.8333 0.8333 0 1 0 1.6667 0 a 0.8333 0.8333 0 1 0 -1.6667 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer64",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingCart path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer62"
+      },
+      "select": false,
+      "path": "M 15 17.5 a 0.8333 0.8333 0 1 0 1.6667 0 a 0.8333 0.8333 0 1 0 -1.6667 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer65",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingCart path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer62"
+      },
+      "select": false,
+      "path": "M 1.7083 1.7083 h 1.6667 l 2.2167 10.35 a 1.6667 1.6667 0 0 0 1.6667 1.3167 h 8.15 a 1.6667 1.6667 0 0 0 1.625 -1.3083 l 1.375 -6.1917 H 4.2667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer66",
+    "params": {
+      "type": "text",
+      "name": "Procurement",
+      "x": 66,
+      "y": 458,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Procurement",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer67",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 461,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer68",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer67"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer69",
+    "params": {
+      "type": "frame",
+      "name": "Package",
+      "x": 32,
+      "y": 508,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer70",
+    "params": {
+      "type": "vector",
+      "name": "Package path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer69"
+      },
+      "select": false,
+      "path": "M 9.1667 18.1083 a 1.6667 1.6667 0 0 0 1.6667 0 l 5.8333 -3.3333 A 1.6667 1.6667 0 0 0 17.5 13.3333 V 6.6667 a 1.6667 1.6667 0 0 0 -0.8333 -1.4417 l -5.8333 -3.3333 a 1.6667 1.6667 0 0 0 -1.6667 0 l -5.8333 3.3333 A 1.6667 1.6667 0 0 0 2.5 6.6667 v 6.6667 a 1.6667 1.6667 0 0 0 0.8333 1.4417 z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer71",
+    "params": {
+      "type": "vector",
+      "name": "Package path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer69"
+      },
+      "select": false,
+      "path": "M 10 18.3333 V 10"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer72",
+    "params": {
+      "type": "vector",
+      "name": "Package path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer69"
+      },
+      "select": false,
+      "path": "m 2.75 5.8333 6.4192 3.945 a 1.6667 1.6667 0 0 0 1.6617 0 L 17.25 5.8333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer73",
+    "params": {
+      "type": "vector",
+      "name": "Package path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer69"
+      },
+      "select": false,
+      "path": "m 6.25 3.5583 7.5 4.2917"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer74",
+    "params": {
+      "type": "text",
+      "name": "Inventory",
+      "x": 66,
+      "y": 510,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Inventory",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer75",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 513,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer76",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer75"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer77",
+    "params": {
+      "type": "frame",
+      "name": "ChartNoAxesCombined",
+      "x": 32,
+      "y": 560,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer78",
+    "params": {
+      "type": "vector",
+      "name": "ChartNoAxesCombined path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer77"
+      },
+      "select": false,
+      "path": "M 10 13.3333 v 4.1667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer79",
+    "params": {
+      "type": "vector",
+      "name": "ChartNoAxesCombined path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer77"
+      },
+      "select": false,
+      "path": "M 13.3333 11.6667 v 5.8333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer80",
+    "params": {
+      "type": "vector",
+      "name": "ChartNoAxesCombined path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer77"
+      },
+      "select": false,
+      "path": "M 16.6667 8.3333 v 9.1667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer81",
+    "params": {
+      "type": "vector",
+      "name": "ChartNoAxesCombined path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer77"
+      },
+      "select": false,
+      "path": "m 18.3333 2.5 -7.205 7.205 a 0.4167 0.4167 0 0 1 -0.59 0 L 7.795 6.9617 a 0.4167 0.4167 0 0 0 -0.5892 0 L 1.6667 12.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer82",
+    "params": {
+      "type": "vector",
+      "name": "ChartNoAxesCombined path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer77"
+      },
+      "select": false,
+      "path": "M 3.3333 15 v 2.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer83",
+    "params": {
+      "type": "vector",
+      "name": "ChartNoAxesCombined path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer77"
+      },
+      "select": false,
+      "path": "M 6.6667 11.6667 v 5.8333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer84",
+    "params": {
+      "type": "text",
+      "name": "Sales & CRM",
+      "x": 66,
+      "y": 562,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Sales & CRM",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer85",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 565,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer86",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer85"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer87",
+    "params": {
+      "type": "frame",
+      "name": "Calculator",
+      "x": 32,
+      "y": 612,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer88",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 3.3333 1.6667 h 13.3333 v 16.6667 h -13.3333 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer89",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 6.6667 5 L 13.3333 5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer90",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 13.3333 11.6667 L 13.3333 15"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer91",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 13.3333 8.3333 h 0.0083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer92",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 10 8.3333 h 0.0083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer93",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 6.6667 8.3333 h 0.0083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer94",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 10 11.6667 h 0.0083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer95",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 6.6667 11.6667 h 0.0083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer96",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 10 15 h 0.0083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer97",
+    "params": {
+      "type": "vector",
+      "name": "Calculator path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer87"
+      },
+      "select": false,
+      "path": "M 6.6667 15 h 0.0083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer98",
+    "params": {
+      "type": "text",
+      "name": "Accounting",
+      "x": 66,
+      "y": 614,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Accounting",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer99",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 617,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer100",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer99"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer101",
+    "params": {
+      "type": "frame",
+      "name": "Users",
+      "x": 32,
+      "y": 664,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer102",
+    "params": {
+      "type": "vector",
+      "name": "Users path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer101"
+      },
+      "select": false,
+      "path": "M 13.3333 17.5 v -1.6667 a 3.3333 3.3333 0 0 0 -3.3333 -3.3333 H 5 a 3.3333 3.3333 0 0 0 -3.3333 3.3333 v 1.6667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer103",
+    "params": {
+      "type": "vector",
+      "name": "Users path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer101"
+      },
+      "select": false,
+      "path": "M 4.1667 5.8333 a 3.3333 3.3333 0 1 0 6.6667 0 a 3.3333 3.3333 0 1 0 -6.6667 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer104",
+    "params": {
+      "type": "vector",
+      "name": "Users path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer101"
+      },
+      "select": false,
+      "path": "M 18.3333 17.5 v -1.6667 a 3.3333 3.3333 0 0 0 -2.5 -3.225"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer105",
+    "params": {
+      "type": "vector",
+      "name": "Users path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer101"
+      },
+      "select": false,
+      "path": "M 13.3333 2.6083 a 3.3333 3.3333 0 0 1 0 6.4583"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer106",
+    "params": {
+      "type": "text",
+      "name": "Human Resources",
+      "x": 66,
+      "y": 666,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Human Resources",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer107",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 669,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer108",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer107"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer109",
+    "params": {
+      "type": "frame",
+      "name": "Factory",
+      "x": 32,
+      "y": 716,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer110",
+    "params": {
+      "type": "vector",
+      "name": "Factory path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer109"
+      },
+      "select": false,
+      "path": "M 1.6667 16.6667 a 1.6667 1.6667 0 0 0 1.6667 1.6667 h 13.3333 a 1.6667 1.6667 0 0 0 1.6667 -1.6667 V 6.6667 l -5.8333 4.1667 V 6.6667 l -5.8333 4.1667 V 3.3333 a 1.6667 1.6667 0 0 0 -1.6667 -1.6667 H 3.3333 a 1.6667 1.6667 0 0 0 -1.6667 1.6667 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer111",
+    "params": {
+      "type": "vector",
+      "name": "Factory path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer109"
+      },
+      "select": false,
+      "path": "M 14.1667 15 h 0.8333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer112",
+    "params": {
+      "type": "vector",
+      "name": "Factory path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer109"
+      },
+      "select": false,
+      "path": "M 10 15 h 0.8333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer113",
+    "params": {
+      "type": "vector",
+      "name": "Factory path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer109"
+      },
+      "select": false,
+      "path": "M 5.8333 15 h 0.8333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer114",
+    "params": {
+      "type": "text",
+      "name": "Manufacturing",
+      "x": 66,
+      "y": 718,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Manufacturing",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer115",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 721,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer116",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer115"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer117",
+    "params": {
+      "type": "frame",
+      "name": "BarChart3",
+      "x": 32,
+      "y": 768,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer118",
+    "params": {
+      "type": "vector",
+      "name": "BarChart3 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer117"
+      },
+      "select": false,
+      "path": "M 2.5 2.5 v 13.3333 a 1.6667 1.6667 0 0 0 1.6667 1.6667 h 13.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer119",
+    "params": {
+      "type": "vector",
+      "name": "BarChart3 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer117"
+      },
+      "select": false,
+      "path": "M 15 14.1667 V 7.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer120",
+    "params": {
+      "type": "vector",
+      "name": "BarChart3 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer117"
+      },
+      "select": false,
+      "path": "M 10.8333 14.1667 V 4.1667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer121",
+    "params": {
+      "type": "vector",
+      "name": "BarChart3 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer117"
+      },
+      "select": false,
+      "path": "M 6.6667 14.1667 v -2.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer122",
+    "params": {
+      "type": "text",
+      "name": "Reports & Analytics",
+      "x": 66,
+      "y": 770,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Reports & Analytics",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer123",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 773,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer124",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer123"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer125",
+    "params": {
+      "type": "frame",
+      "name": "Settings2",
+      "x": 32,
+      "y": 820,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer126",
+    "params": {
+      "type": "vector",
+      "name": "Settings2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer125"
+      },
+      "select": false,
+      "path": "M 16.6667 5.8333 h -7.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer127",
+    "params": {
+      "type": "vector",
+      "name": "Settings2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer125"
+      },
+      "select": false,
+      "path": "M 11.6667 14.1667 H 4.1667"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer128",
+    "params": {
+      "type": "vector",
+      "name": "Settings2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer125"
+      },
+      "select": false,
+      "path": "M 11.6667 14.1667 a 2.5 2.5 0 1 0 5 0 a 2.5 2.5 0 1 0 -5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer129",
+    "params": {
+      "type": "vector",
+      "name": "Settings2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#777E8D",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer125"
+      },
+      "select": false,
+      "path": "M 3.3333 5.8333 a 2.5 2.5 0 1 0 5 0 a 2.5 2.5 0 1 0 -5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer130",
+    "params": {
+      "type": "text",
+      "name": "Settings & Permissions",
+      "x": 66,
+      "y": 822,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13.5,
+        "fill": "#48505F"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Settings & Permissions",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer131",
+    "params": {
+      "type": "frame",
+      "name": "ChevronDown",
+      "x": 231,
+      "y": 825,
+      "width": 12,
+      "height": 12,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer132",
+    "params": {
+      "type": "vector",
+      "name": "ChevronDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9A9FAC",
+        "strokeWeight": 0.85
+      },
+      "parent": {
+        "$ref": "layer131"
+      },
+      "select": false,
+      "path": "m 3 4.5 3 3 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer133",
+    "params": {
+      "type": "rectangle",
+      "name": "Sidebar footer hairline",
+      "x": 28,
+      "y": 1162,
+      "width": 216,
+      "height": 1,
+      "props": {
+        "fill": "#DCE1EB",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer134",
+    "params": {
+      "type": "frame",
+      "name": "CircleHelp",
+      "x": 32,
+      "y": 1190,
+      "width": 20,
+      "height": 20,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer135",
+    "params": {
+      "type": "vector",
+      "name": "CircleHelp path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer134"
+      },
+      "select": false,
+      "path": "M 1.6667 10 a 8.3333 8.3333 0 1 0 16.6667 0 a 8.3333 8.3333 0 1 0 -16.6667 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer136",
+    "params": {
+      "type": "vector",
+      "name": "CircleHelp path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer134"
+      },
+      "select": false,
+      "path": "M 7.575 7.5 a 2.5 2.5 0 0 1 4.8583 0.8333 c 0 1.6667 -2.5 2.5 -2.5 2.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer137",
+    "params": {
+      "type": "vector",
+      "name": "CircleHelp path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.4166666666666667
+      },
+      "parent": {
+        "$ref": "layer134"
+      },
+      "select": false,
+      "path": "M 10 14.1667 h 0.0083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer138",
+    "params": {
+      "type": "text",
+      "name": "Butuh bantuan?",
+      "x": 66,
+      "y": 1189,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Butuh bantuan?",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer139",
+    "params": {
+      "type": "text",
+      "name": "Buka Pusat Bantuan",
+      "x": 66,
+      "y": 1211,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Buka Pusat Bantuan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer140",
+    "params": {
+      "type": "frame",
+      "name": "ArrowUpRight",
+      "x": 226,
+      "y": 1200,
+      "width": 14,
+      "height": 14,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer141",
+    "params": {
+      "type": "vector",
+      "name": "ArrowUpRight path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 0.9916666666666667
+      },
+      "parent": {
+        "$ref": "layer140"
+      },
+      "select": false,
+      "path": "M 4.0833 4.0833 h 5.8333 v 5.8333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer142",
+    "params": {
+      "type": "vector",
+      "name": "ArrowUpRight path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 0.9916666666666667
+      },
+      "parent": {
+        "$ref": "layer140"
+      },
+      "select": false,
+      "path": "M 4.0833 9.9167 9.9167 4.0833"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer143",
+    "params": {
+      "type": "rectangle",
+      "name": "Profile / account control",
+      "x": 16,
+      "y": 1306,
+      "width": 240,
+      "height": 74,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 20,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer143"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer144",
+    "params": {
+      "type": "ellipse",
+      "name": "Avatar",
+      "x": 30,
+      "y": 1323,
+      "width": 40,
+      "height": 40,
+      "props": {
+        "fill": "#E0EBFE"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer145",
+    "params": {
+      "type": "text",
+      "name": "AP",
+      "x": 41,
+      "y": 1336,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 12,
+        "fill": "#3666B6"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "AP",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer146",
+    "params": {
+      "type": "text",
+      "name": "Aditya Pratama",
+      "x": 83,
+      "y": 1323,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 12.5,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "Aditya Pratama",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer147",
+    "params": {
+      "type": "text",
+      "name": "ADMIN · Alpha",
+      "x": 83,
+      "y": 1345,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "text": "ADMIN · Alpha",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer148",
+    "params": {
+      "type": "frame",
+      "name": "MoreHorizontal",
+      "x": 224,
+      "y": 1336,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer3"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer149",
+    "params": {
+      "type": "vector",
+      "name": "MoreHorizontal path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer148"
+      },
+      "select": false,
+      "path": "M 8.25 9 a 0.75 0.75 0 1 0 1.5 0 a 0.75 0.75 0 1 0 -1.5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer150",
+    "params": {
+      "type": "vector",
+      "name": "MoreHorizontal path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer148"
+      },
+      "select": false,
+      "path": "M 13.5 9 a 0.75 0.75 0 1 0 1.5 0 a 0.75 0.75 0 1 0 -1.5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer151",
+    "params": {
+      "type": "vector",
+      "name": "MoreHorizontal path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer148"
+      },
+      "select": false,
+      "path": "M 3 9 a 0.75 0.75 0 1 0 1.5 0 a 0.75 0.75 0 1 0 -1.5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer152",
+    "params": {
+      "type": "frame",
+      "name": "Controls / Liquid Glass toolbar",
+      "x": 328,
+      "y": 28,
+      "width": 1552,
+      "height": 72,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer153",
+    "params": {
+      "type": "rectangle",
+      "name": "Material / toolbar",
+      "x": 0,
+      "y": 0,
+      "width": 1552,
+      "height": 72,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 28,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer153"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer154",
+    "params": {
+      "type": "text",
+      "name": "Enterprise ERP",
+      "x": 24,
+      "y": 28,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "text": "Enterprise ERP",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer155",
+    "params": {
+      "type": "frame",
+      "name": "ChevronRight",
+      "x": 130,
+      "y": 29,
+      "width": 13,
+      "height": 13,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer156",
+    "params": {
+      "type": "vector",
+      "name": "ChevronRight path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#A1A8B4",
+        "strokeWeight": 0.9208333333333333
+      },
+      "parent": {
+        "$ref": "layer155"
+      },
+      "select": false,
+      "path": "m 4.875 9.75 3.25 -3.25 -3.25 -3.25"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer157",
+    "params": {
+      "type": "text",
+      "name": "Dashboard",
+      "x": 156,
+      "y": 28,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 13,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "text": "Dashboard",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer158",
+    "params": {
+      "type": "rectangle",
+      "name": "Search capsule",
+      "x": 900,
+      "y": 14,
+      "width": 294,
+      "height": 44,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 22,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer158"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer159",
+    "params": {
+      "type": "frame",
+      "name": "Search",
+      "x": 916,
+      "y": 28,
+      "width": 17,
+      "height": 17,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer160",
+    "params": {
+      "type": "vector",
+      "name": "Search path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#818998",
+        "strokeWeight": 1.2041666666666666
+      },
+      "parent": {
+        "$ref": "layer159"
+      },
+      "select": false,
+      "path": "M 2.125 7.7917 a 5.6667 5.6667 0 1 0 11.3333 0 a 5.6667 5.6667 0 1 0 -11.3333 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer161",
+    "params": {
+      "type": "vector",
+      "name": "Search path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#818998",
+        "strokeWeight": 1.2041666666666666
+      },
+      "parent": {
+        "$ref": "layer159"
+      },
+      "select": false,
+      "path": "m 14.875 14.875 -3.0458 -3.0458"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer162",
+    "params": {
+      "type": "text",
+      "name": "Cari modul atau dokumen",
+      "x": 945,
+      "y": 29,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12,
+        "fill": "#818998"
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "text": "Cari modul atau dokumen",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer163",
+    "params": {
+      "type": "text",
+      "name": "⌘ K",
+      "x": 1157,
+      "y": 30,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 10,
+        "fill": "#818998"
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "text": "⌘ K",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer164",
+    "params": {
+      "type": "rectangle",
+      "name": "Company switcher capsule",
+      "x": 1210,
+      "y": 14,
+      "width": 218,
+      "height": 44,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 22,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer164"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer165",
+    "params": {
+      "type": "ellipse",
+      "name": "Active Company indicator",
+      "x": 1227,
+      "y": 33,
+      "width": 7,
+      "height": 7,
+      "props": {
+        "fill": "#278A5B"
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer166",
+    "params": {
+      "type": "text",
+      "name": "PT Alpha Distribusi",
+      "x": 1245,
+      "y": 29,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "text": "PT Alpha Distribusi",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer167",
+    "params": {
+      "type": "frame",
+      "name": "ChevronsUpDown",
+      "x": 1402,
+      "y": 29,
+      "width": 13,
+      "height": 13,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer168",
+    "params": {
+      "type": "vector",
+      "name": "ChevronsUpDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 0.9208333333333333
+      },
+      "parent": {
+        "$ref": "layer167"
+      },
+      "select": false,
+      "path": "m 3.7917 8.125 2.7083 2.7083 2.7083 -2.7083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer169",
+    "params": {
+      "type": "vector",
+      "name": "ChevronsUpDown path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 0.9208333333333333
+      },
+      "parent": {
+        "$ref": "layer167"
+      },
+      "select": false,
+      "path": "m 3.7917 4.875 2.7083 -2.7083 2.7083 2.7083"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer170",
+    "params": {
+      "type": "rectangle",
+      "name": "Notifications control",
+      "x": 1442,
+      "y": 14,
+      "width": 44,
+      "height": 44,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 22,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer170"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer171",
+    "params": {
+      "type": "frame",
+      "name": "Bell",
+      "x": 1455,
+      "y": 27,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer172",
+    "params": {
+      "type": "vector",
+      "name": "Bell path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#5D6573",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer171"
+      },
+      "select": false,
+      "path": "M 7.701 15.75 a 1.5 1.5 0 0 0 2.598 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer173",
+    "params": {
+      "type": "vector",
+      "name": "Bell path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#5D6573",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer171"
+      },
+      "select": false,
+      "path": "M 2.4465 11.4945 A 0.75 0.75 0 0 0 3 12.75 h 12 a 0.75 0.75 0 0 0 0.555 -1.2547 C 14.5575 10.467 13.5 9.3743 13.5 6 A 4.5 4.5 0 0 0 4.5 6 c 0 3.3743 -1.0583 4.467 -2.0535 5.4945"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer174",
+    "params": {
+      "type": "rectangle",
+      "name": "Settings control",
+      "x": 1496,
+      "y": 14,
+      "width": 44,
+      "height": 44,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 22,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer174"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer175",
+    "params": {
+      "type": "frame",
+      "name": "Settings2",
+      "x": 1509,
+      "y": 27,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "layer152"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer176",
+    "params": {
+      "type": "vector",
+      "name": "Settings2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#5D6573",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer175"
+      },
+      "select": false,
+      "path": "M 15 5.25 h -6.75"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer177",
+    "params": {
+      "type": "vector",
+      "name": "Settings2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#5D6573",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer175"
+      },
+      "select": false,
+      "path": "M 10.5 12.75 H 3.75"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer178",
+    "params": {
+      "type": "vector",
+      "name": "Settings2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#5D6573",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer175"
+      },
+      "select": false,
+      "path": "M 10.5 12.75 a 2.25 2.25 0 1 0 4.5 0 a 2.25 2.25 0 1 0 -4.5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer179",
+    "params": {
+      "type": "vector",
+      "name": "Settings2 path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#5D6573",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer175"
+      },
+      "select": false,
+      "path": "M 3 5.25 a 2.25 2.25 0 1 0 4.5 0 a 2.25 2.25 0 1 0 -4.5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer180",
+    "params": {
+      "type": "text",
+      "name": "Dashboard",
+      "x": 328,
+      "y": 142,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 42,
+        "fill": "#20232B",
+        "letterSpacing": -1.1
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Dashboard",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer181",
+    "params": {
+      "type": "text",
+      "name": "Ringkasan Sales, Procurement, dan Inventory company aktif.",
+      "x": 330,
+      "y": 199,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 15,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Ringkasan Sales, Procurement, dan Inventory company aktif.",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer182",
+    "params": {
+      "type": "rectangle",
+      "name": "Procurement",
+      "x": 1510,
+      "y": 157,
+      "width": 160,
+      "height": 44,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 22,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer182"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer183",
+    "params": {
+      "type": "frame",
+      "name": "ShoppingCart",
+      "x": 1526,
+      "y": 170,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer184",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingCart path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer183"
+      },
+      "select": false,
+      "path": "M 5.25 15.75 a 0.75 0.75 0 1 0 1.5 0 a 0.75 0.75 0 1 0 -1.5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer185",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingCart path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer183"
+      },
+      "select": false,
+      "path": "M 13.5 15.75 a 0.75 0.75 0 1 0 1.5 0 a 0.75 0.75 0 1 0 -1.5 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer186",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingCart path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer183"
+      },
+      "select": false,
+      "path": "M 1.5375 1.5375 h 1.5 l 1.995 9.315 a 1.5 1.5 0 0 0 1.5 1.185 h 7.335 a 1.5 1.5 0 0 0 1.4625 -1.1775 l 1.2375 -5.5725 H 3.84"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer187",
+    "params": {
+      "type": "text",
+      "name": "Procurement",
+      "x": 1553,
+      "y": 170,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Procurement",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer188",
+    "params": {
+      "type": "rectangle",
+      "name": "Buat Transaksi",
+      "x": 1686,
+      "y": 157,
+      "width": 194,
+      "height": 44,
+      "props": {
+        "fill": "#007AFF",
+        "cornerRadius": 22,
+        "effects": [
+          {
+            "type": "dropShadow",
+            "color": "#007AFF21",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 16
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer189",
+    "params": {
+      "type": "frame",
+      "name": "Plus",
+      "x": 1702,
+      "y": 170,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer190",
+    "params": {
+      "type": "vector",
+      "name": "Plus path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#FFFFFF",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer189"
+      },
+      "select": false,
+      "path": "M 3.75 9 h 10.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer191",
+    "params": {
+      "type": "vector",
+      "name": "Plus path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#FFFFFF",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer189"
+      },
+      "select": false,
+      "path": "M 9 3.75 v 10.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer192",
+    "params": {
+      "type": "text",
+      "name": "Buat Transaksi",
+      "x": 1729,
+      "y": 170,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#FFFFFF"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Buat Transaksi",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer193",
+    "params": {
+      "type": "ellipse",
+      "name": "Company active dot",
+      "x": 330,
+      "y": 247,
+      "width": 7,
+      "height": 7,
+      "props": {
+        "fill": "#278A5B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer194",
+    "params": {
+      "type": "text",
+      "name": "PT Alpha Distribusi",
+      "x": 345,
+      "y": 241,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "PT Alpha Distribusi",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer195",
+    "params": {
+      "type": "text",
+      "name": "Data operasional",
+      "x": 475,
+      "y": 242,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12,
+        "fill": "#9197A3"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Data operasional",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer196",
+    "params": {
+      "type": "rectangle",
+      "name": "Seluruh periode",
+      "x": 1708,
+      "y": 229,
+      "width": 172,
+      "height": 44,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 22,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer196"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer197",
+    "params": {
+      "type": "frame",
+      "name": "CalendarDays",
+      "x": 1724,
+      "y": 242,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer198",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 6 1.5 v 3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer199",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 12 1.5 v 3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer200",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 2.25 3 h 13.5 v 13.5 h -13.5 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer201",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 2.25 7.5 h 13.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer202",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 6 10.5 h 0.0075"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer203",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 9 10.5 h 0.0075"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer204",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 12 10.5 h 0.0075"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer205",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 6 13.5 h 0.0075"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer206",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 9 13.5 h 0.0075"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer207",
+    "params": {
+      "type": "vector",
+      "name": "CalendarDays path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer197"
+      },
+      "select": false,
+      "path": "M 12 13.5 h 0.0075"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer208",
+    "params": {
+      "type": "text",
+      "name": "Seluruh periode",
+      "x": 1751,
+      "y": 242,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Seluruh periode",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer209",
+    "params": {
+      "type": "rectangle",
+      "name": "Summary / solid financial surface",
+      "x": 328,
+      "y": 286,
+      "width": 1552,
+      "height": 252,
+      "props": {
+        "fill": "#FFFFFF",
+        "cornerRadius": 26,
+        "stroke": "#EBEDF2",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "dropShadow",
+            "color": "#2032530A",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 26
+          }
+        ],
+        "cornerSmoothing": 0.65
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer210",
+    "params": {
+      "type": "rectangle",
+      "name": "Summary column divider 1",
+      "x": 845,
+      "y": 310,
+      "width": 1,
+      "height": 204,
+      "props": {
+        "fill": "#EEF0F5",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer211",
+    "params": {
+      "type": "rectangle",
+      "name": "Summary column divider 2",
+      "x": 1362,
+      "y": 310,
+      "width": 1,
+      "height": 204,
+      "props": {
+        "fill": "#EEF0F5",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer212",
+    "params": {
+      "type": "rectangle",
+      "name": "Summary row divider",
+      "x": 352,
+      "y": 412,
+      "width": 1504,
+      "height": 1,
+      "props": {
+        "fill": "#EEF0F5",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer213",
+    "params": {
+      "type": "text",
+      "name": "Total Sales",
+      "x": 352,
+      "y": 307,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Total Sales",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer214",
+    "params": {
+      "type": "frame",
+      "name": "CircleDollarSign",
+      "x": 789,
+      "y": 307,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer215",
+    "params": {
+      "type": "vector",
+      "name": "CircleDollarSign path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer214"
+      },
+      "select": false,
+      "path": "M 1.5 9 a 7.5 7.5 0 1 0 15 0 a 7.5 7.5 0 1 0 -15 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer216",
+    "params": {
+      "type": "vector",
+      "name": "CircleDollarSign path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer214"
+      },
+      "select": false,
+      "path": "M 12 6 h -4.5 a 1.5 1.5 0 1 0 0 3 h 3 a 1.5 1.5 0 1 1 0 3 H 6"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer217",
+    "params": {
+      "type": "vector",
+      "name": "CircleDollarSign path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer214"
+      },
+      "select": false,
+      "path": "M 9 13.5 V 4.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer218",
+    "params": {
+      "type": "text",
+      "name": "Rp 2.220.000",
+      "x": 352,
+      "y": 332,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 33,
+        "fill": "#20232B",
+        "letterSpacing": -1.1
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 2.220.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer219",
+    "params": {
+      "type": "text",
+      "name": "Sales Invoice dibukukan",
+      "x": 352,
+      "y": 382,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#939AA8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Sales Invoice dibukukan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer220",
+    "params": {
+      "type": "text",
+      "name": "Total Purchases",
+      "x": 869.333,
+      "y": 307,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Total Purchases",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer221",
+    "params": {
+      "type": "frame",
+      "name": "ShoppingBag",
+      "x": 1306.333,
+      "y": 307,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer222",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingBag path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer221"
+      },
+      "select": false,
+      "path": "M 4.5 1.5 2.25 4.5 v 10.5 a 1.5 1.5 0 0 0 1.5 1.5 h 10.5 a 1.5 1.5 0 0 0 1.5 -1.5 V 4.5 l -2.25 -3 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer223",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingBag path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer221"
+      },
+      "select": false,
+      "path": "M 2.25 4.5 h 13.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer224",
+    "params": {
+      "type": "vector",
+      "name": "ShoppingBag path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer221"
+      },
+      "select": false,
+      "path": "M 12 7.5 a 3 3 0 0 1 -6 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer225",
+    "params": {
+      "type": "text",
+      "name": "Rp 7.885.000",
+      "x": 869.333,
+      "y": 332,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 33,
+        "fill": "#20232B",
+        "letterSpacing": -1.1
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 7.885.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer226",
+    "params": {
+      "type": "text",
+      "name": "Purchase Invoice dibukukan",
+      "x": 869.333,
+      "y": 382,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#939AA8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Invoice dibukukan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer227",
+    "params": {
+      "type": "text",
+      "name": "Utang Belum Lunas",
+      "x": 1386.666,
+      "y": 307,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Utang Belum Lunas",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer228",
+    "params": {
+      "type": "frame",
+      "name": "FileClock",
+      "x": 1823.666,
+      "y": 307,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer229",
+    "params": {
+      "type": "vector",
+      "name": "FileClock path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer228"
+      },
+      "select": false,
+      "path": "M 12 16.5 h 1.5 a 1.5 1.5 0 0 0 1.5 -1.5 V 5.25 l -3.75 -3.75 H 4.5 a 1.5 1.5 0 0 0 -1.5 1.5 v 2.25"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer230",
+    "params": {
+      "type": "vector",
+      "name": "FileClock path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer228"
+      },
+      "select": false,
+      "path": "M 10.5 1.5 v 3 a 1.5 1.5 0 0 0 1.5 1.5 h 3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer231",
+    "params": {
+      "type": "vector",
+      "name": "FileClock path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer228"
+      },
+      "select": false,
+      "path": "M 1.5 12 a 4.5 4.5 0 1 0 9 0 a 4.5 4.5 0 1 0 -9 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer232",
+    "params": {
+      "type": "vector",
+      "name": "FileClock path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer228"
+      },
+      "select": false,
+      "path": "M 7.125 13.125 6 12.1875 V 10.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer233",
+    "params": {
+      "type": "text",
+      "name": "Rp 0",
+      "x": 1386.666,
+      "y": 332,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 33,
+        "fill": "#20232B",
+        "letterSpacing": -1.1
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 0",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer234",
+    "params": {
+      "type": "text",
+      "name": "Purchase Invoice",
+      "x": 1386.666,
+      "y": 382,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#939AA8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Invoice",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer235",
+    "params": {
+      "type": "text",
+      "name": "Piutang Belum Lunas",
+      "x": 352,
+      "y": 433,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Piutang Belum Lunas",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer236",
+    "params": {
+      "type": "frame",
+      "name": "FileClock",
+      "x": 789,
+      "y": 433,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer237",
+    "params": {
+      "type": "vector",
+      "name": "FileClock path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer236"
+      },
+      "select": false,
+      "path": "M 12 16.5 h 1.5 a 1.5 1.5 0 0 0 1.5 -1.5 V 5.25 l -3.75 -3.75 H 4.5 a 1.5 1.5 0 0 0 -1.5 1.5 v 2.25"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer238",
+    "params": {
+      "type": "vector",
+      "name": "FileClock path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer236"
+      },
+      "select": false,
+      "path": "M 10.5 1.5 v 3 a 1.5 1.5 0 0 0 1.5 1.5 h 3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer239",
+    "params": {
+      "type": "vector",
+      "name": "FileClock path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer236"
+      },
+      "select": false,
+      "path": "M 1.5 12 a 4.5 4.5 0 1 0 9 0 a 4.5 4.5 0 1 0 -9 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer240",
+    "params": {
+      "type": "vector",
+      "name": "FileClock path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer236"
+      },
+      "select": false,
+      "path": "M 7.125 13.125 6 12.1875 V 10.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer241",
+    "params": {
+      "type": "text",
+      "name": "Rp 0",
+      "x": 352,
+      "y": 458,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 33,
+        "fill": "#20232B",
+        "letterSpacing": -1.1
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 0",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer242",
+    "params": {
+      "type": "text",
+      "name": "Sales Invoice",
+      "x": 352,
+      "y": 508,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#939AA8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Sales Invoice",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer243",
+    "params": {
+      "type": "text",
+      "name": "Menunggu Approval",
+      "x": 869.333,
+      "y": 433,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Menunggu Approval",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer244",
+    "params": {
+      "type": "frame",
+      "name": "ClipboardCheck",
+      "x": 1306.333,
+      "y": 433,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer245",
+    "params": {
+      "type": "vector",
+      "name": "ClipboardCheck path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer244"
+      },
+      "select": false,
+      "path": "M 6 1.5 h 6 v 3 h -6 Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer246",
+    "params": {
+      "type": "vector",
+      "name": "ClipboardCheck path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer244"
+      },
+      "select": false,
+      "path": "M 12 3 h 1.5 a 1.5 1.5 0 0 1 1.5 1.5 v 10.5 a 1.5 1.5 0 0 1 -1.5 1.5 H 4.5 a 1.5 1.5 0 0 1 -1.5 -1.5 V 4.5 a 1.5 1.5 0 0 1 1.5 -1.5 h 1.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer247",
+    "params": {
+      "type": "vector",
+      "name": "ClipboardCheck path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer244"
+      },
+      "select": false,
+      "path": "m 6.75 10.5 1.5 1.5 3 -3"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer248",
+    "params": {
+      "type": "text",
+      "name": "0",
+      "x": 869.333,
+      "y": 458,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 33,
+        "fill": "#20232B",
+        "letterSpacing": -1.1
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "0",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer249",
+    "params": {
+      "type": "text",
+      "name": "Purchase Request",
+      "x": 869.333,
+      "y": 508,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#939AA8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Request",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer250",
+    "params": {
+      "type": "text",
+      "name": "Nilai Inventory",
+      "x": 1386.666,
+      "y": 433,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Nilai Inventory",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer251",
+    "params": {
+      "type": "frame",
+      "name": "Package",
+      "x": 1823.666,
+      "y": 433,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer252",
+    "params": {
+      "type": "vector",
+      "name": "Package path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer251"
+      },
+      "select": false,
+      "path": "M 8.25 16.2975 a 1.5 1.5 0 0 0 1.5 0 l 5.25 -3 A 1.5 1.5 0 0 0 15.75 12 V 6 a 1.5 1.5 0 0 0 -0.75 -1.2975 l -5.25 -3 a 1.5 1.5 0 0 0 -1.5 0 l -5.25 3 A 1.5 1.5 0 0 0 2.25 6 v 6 a 1.5 1.5 0 0 0 0.75 1.2975 z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer253",
+    "params": {
+      "type": "vector",
+      "name": "Package path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer251"
+      },
+      "select": false,
+      "path": "M 9 16.5 V 9"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer254",
+    "params": {
+      "type": "vector",
+      "name": "Package path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer251"
+      },
+      "select": false,
+      "path": "m 2.475 5.25 5.7773 3.5505 a 1.5 1.5 0 0 0 1.4955 0 L 15.525 5.25"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer255",
+    "params": {
+      "type": "vector",
+      "name": "Package path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#8A93A4",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer251"
+      },
+      "select": false,
+      "path": "m 5.625 3.2025 6.75 3.8625"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer256",
+    "params": {
+      "type": "text",
+      "name": "Rp 11.535.000",
+      "x": 1386.666,
+      "y": 458,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 33,
+        "fill": "#20232B",
+        "letterSpacing": -1.1
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 11.535.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer257",
+    "params": {
+      "type": "text",
+      "name": "Seluruh Warehouse",
+      "x": 1386.666,
+      "y": 508,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#939AA8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Seluruh Warehouse",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer258",
+    "params": {
+      "type": "rectangle",
+      "name": "Analytics / solid content surface",
+      "x": 328,
+      "y": 562,
+      "width": 1172,
+      "height": 366,
+      "props": {
+        "fill": "#FFFFFF",
+        "cornerRadius": 26,
+        "stroke": "#EBEDF2",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "dropShadow",
+            "color": "#2032530A",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 26
+          }
+        ],
+        "cornerSmoothing": 0.65
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer259",
+    "params": {
+      "type": "text",
+      "name": "Revenue & Expenses",
+      "x": 356,
+      "y": 587,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 20,
+        "fill": "#20232B",
+        "letterSpacing": -0.35
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Revenue & Expenses",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer260",
+    "params": {
+      "type": "text",
+      "name": "Nilai Invoice, bukan laporan laba rugi.",
+      "x": 356,
+      "y": 620,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Nilai Invoice, bukan laporan laba rugi.",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer261",
+    "params": {
+      "type": "rectangle",
+      "name": "Time scope badge",
+      "x": 1335,
+      "y": 586,
+      "width": 137,
+      "height": 32,
+      "props": {
+        "fill": "#F5F6FA",
+        "cornerRadius": 16
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer262",
+    "params": {
+      "type": "text",
+      "name": "6 bulan terakhir",
+      "x": 1353,
+      "y": 595,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11.5,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "6 bulan terakhir",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer263",
+    "params": {
+      "type": "ellipse",
+      "name": "Sales legend",
+      "x": 356,
+      "y": 658,
+      "width": 7,
+      "height": 7,
+      "props": {
+        "fill": "#32A474"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer264",
+    "params": {
+      "type": "text",
+      "name": "Sales Invoice",
+      "x": 373,
+      "y": 654,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11.5,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Sales Invoice",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer265",
+    "params": {
+      "type": "ellipse",
+      "name": "Purchase legend",
+      "x": 486,
+      "y": 658,
+      "width": 7,
+      "height": 7,
+      "props": {
+        "fill": "#99A8BD"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer266",
+    "params": {
+      "type": "text",
+      "name": "Purchase Invoice",
+      "x": 503,
+      "y": 654,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11.5,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Invoice",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer267",
+    "params": {
+      "type": "rectangle",
+      "name": "Chart grid / 0",
+      "x": 407,
+      "y": 696,
+      "width": 1065,
+      "height": 1,
+      "props": {
+        "fill": "#EFF1F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer268",
+    "params": {
+      "type": "text",
+      "name": "8 jt",
+      "x": 356,
+      "y": 689,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#9097A5"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "8 jt",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer269",
+    "params": {
+      "type": "rectangle",
+      "name": "Chart grid / 1",
+      "x": 407,
+      "y": 739,
+      "width": 1065,
+      "height": 1,
+      "props": {
+        "fill": "#EFF1F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer270",
+    "params": {
+      "type": "text",
+      "name": "6 jt",
+      "x": 356,
+      "y": 732,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#9097A5"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "6 jt",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer271",
+    "params": {
+      "type": "rectangle",
+      "name": "Chart grid / 2",
+      "x": 407,
+      "y": 782,
+      "width": 1065,
+      "height": 1,
+      "props": {
+        "fill": "#EFF1F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer272",
+    "params": {
+      "type": "text",
+      "name": "4 jt",
+      "x": 356,
+      "y": 775,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#9097A5"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "4 jt",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer273",
+    "params": {
+      "type": "rectangle",
+      "name": "Chart grid / 3",
+      "x": 407,
+      "y": 825,
+      "width": 1065,
+      "height": 1,
+      "props": {
+        "fill": "#EFF1F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer274",
+    "params": {
+      "type": "text",
+      "name": "2 jt",
+      "x": 356,
+      "y": 818,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#9097A5"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "2 jt",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer275",
+    "params": {
+      "type": "rectangle",
+      "name": "Chart grid / 4",
+      "x": 407,
+      "y": 868,
+      "width": 1065,
+      "height": 1,
+      "props": {
+        "fill": "#EFF1F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer276",
+    "params": {
+      "type": "text",
+      "name": "0",
+      "x": 356,
+      "y": 861,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#9097A5"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "0",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer277",
+    "params": {
+      "type": "text",
+      "name": "Jun",
+      "x": 403,
+      "y": 888,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11.5,
+        "fill": "#8A919E"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Jun",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer278",
+    "params": {
+      "type": "text",
+      "name": "Jul",
+      "x": 614,
+      "y": 888,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11.5,
+        "fill": "#8A919E"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Jul",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer279",
+    "params": {
+      "type": "text",
+      "name": "Agu",
+      "x": 825,
+      "y": 888,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11.5,
+        "fill": "#8A919E"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Agu",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer280",
+    "params": {
+      "type": "text",
+      "name": "Sep",
+      "x": 1036,
+      "y": 888,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11.5,
+        "fill": "#8A919E"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Sep",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer281",
+    "params": {
+      "type": "text",
+      "name": "Okt",
+      "x": 1247,
+      "y": 888,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11.5,
+        "fill": "#8A919E"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Okt",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer282",
+    "params": {
+      "type": "text",
+      "name": "Nov",
+      "x": 1458,
+      "y": 888,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11.5,
+        "fill": "#8A919E"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Nov",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer283",
+    "params": {
+      "type": "vector",
+      "name": "Chart / purchases",
+      "x": 407,
+      "y": 696,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#9CAAC0",
+        "strokeWeight": 1.8,
+        "dashes": [
+          5,
+          5
+        ]
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false,
+      "path": "M0,172C70.33333333333333,172,140.66666666666669,172,211,172C281.3333333333333,172,351.6666666666667,172,422,172C492.3333333333333,172,562.6666666666666,172,633,172C703.3333333333334,172,773.6666666666666,12.900000000000006,844,12.900000000000006C914.3333333333334,12.900000000000006,984.6666666666666,87.23625000000001,1055,161.5725"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer284",
+    "params": {
+      "type": "vector",
+      "name": "Sales area / same Alpha values",
+      "x": 407,
+      "y": 696,
+      "props": {
+        "fill": "#32A47415",
+        "stroke": "#00000000",
+        "strokeWeight": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false,
+      "path": "M0,172C70.33333333333333,172,140.66666666666669,172,211,172C281.3333333333333,172,351.6666666666667,172,422,172C492.3333333333333,172,562.6666666666666,172,633,172C703.3333333333334,172,773.6666666666666,124.27,844,124.27C914.3333333333334,124.27,984.6666666666666,148.135,1055,172L1055,172C984.6666666666666,172,914.3333333333334,172,844,172C773.6666666666666,172,703.3333333333334,172,633,172C562.6666666666666,172,492.3333333333333,172,422,172C351.6666666666667,172,281.3333333333333,172,211,172C140.66666666666669,172,70.33333333333333,172,0,172Z"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer285",
+    "params": {
+      "type": "vector",
+      "name": "Chart / sales",
+      "x": 407,
+      "y": 696,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#32A474",
+        "strokeWeight": 2.5
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false,
+      "path": "M0,172C70.33333333333333,172,140.66666666666669,172,211,172C281.3333333333333,172,351.6666666666667,172,422,172C492.3333333333333,172,562.6666666666666,172,633,172C703.3333333333334,172,773.6666666666666,124.27,844,124.27C914.3333333333334,124.27,984.6666666666666,148.135,1055,172"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer286",
+    "params": {
+      "type": "rectangle",
+      "name": "Approval / solid empty-state surface",
+      "x": 1524,
+      "y": 562,
+      "width": 356,
+      "height": 366,
+      "props": {
+        "fill": "#FFFFFF",
+        "cornerRadius": 26,
+        "stroke": "#EBEDF2",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "dropShadow",
+            "color": "#2032530A",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 26
+          }
+        ],
+        "cornerSmoothing": 0.65
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer287",
+    "params": {
+      "type": "text",
+      "name": "Menunggu Persetujuan",
+      "x": 1548,
+      "y": 590,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 17,
+        "fill": "#20232B",
+        "letterSpacing": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Menunggu Persetujuan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer288",
+    "params": {
+      "type": "text",
+      "name": "Purchase Request",
+      "x": 1548,
+      "y": 620,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Request",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer289",
+    "params": {
+      "type": "rectangle",
+      "name": "Approval count",
+      "x": 1822,
+      "y": 586,
+      "width": 34,
+      "height": 28,
+      "props": {
+        "fill": "#F0F3F9",
+        "cornerRadius": 14
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer290",
+    "params": {
+      "type": "text",
+      "name": "0",
+      "x": 1835,
+      "y": 593,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 12,
+        "fill": "#64728B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "0",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer291",
+    "params": {
+      "type": "ellipse",
+      "name": "Reviewed state / green",
+      "x": 1678,
+      "y": 670,
+      "width": 48,
+      "height": 48,
+      "props": {
+        "fill": "#E6F5EC"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer292",
+    "params": {
+      "type": "frame",
+      "name": "CircleCheck",
+      "x": 1689,
+      "y": 681,
+      "width": 26,
+      "height": 26,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer293",
+    "params": {
+      "type": "vector",
+      "name": "CircleCheck path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#37865B",
+        "strokeWeight": 1.8416666666666666
+      },
+      "parent": {
+        "$ref": "layer292"
+      },
+      "select": false,
+      "path": "M 2.1667 13 a 10.8333 10.8333 0 1 0 21.6667 0 a 10.8333 10.8333 0 1 0 -21.6667 0"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer294",
+    "params": {
+      "type": "vector",
+      "name": "CircleCheck path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#37865B",
+        "strokeWeight": 1.8416666666666666
+      },
+      "parent": {
+        "$ref": "layer292"
+      },
+      "select": false,
+      "path": "m 9.75 13 2.1667 2.1667 4.3333 -4.3333"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer295",
+    "params": {
+      "type": "text",
+      "name": "Tidak ada Approval tertunda",
+      "x": 1564,
+      "y": 744,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 14,
+        "fill": "#20232B",
+        "letterSpacing": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Tidak ada Approval tertunda",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer296",
+    "params": {
+      "type": "text",
+      "name": "Semua Purchase Request telah ditinjau.",
+      "x": 1565,
+      "y": 769,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11.5,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Semua Purchase Request telah ditinjau.",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer297",
+    "params": {
+      "type": "rectangle",
+      "name": "Lihat Purchase Request",
+      "x": 1548,
+      "y": 858,
+      "width": 308,
+      "height": 44,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 22,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer297"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer298",
+    "params": {
+      "type": "frame",
+      "name": "ArrowRight",
+      "x": 1564,
+      "y": 871,
+      "width": 18,
+      "height": 18,
+      "props": {
+        "fill": "#00000000",
+        "clip": true
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer299",
+    "params": {
+      "type": "vector",
+      "name": "ArrowRight path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer298"
+      },
+      "select": false,
+      "path": "M 3.75 9 h 10.5"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer300",
+    "params": {
+      "type": "vector",
+      "name": "ArrowRight path",
+      "x": 0,
+      "y": 0,
+      "props": {
+        "fill": "#00000000",
+        "stroke": "#6E7480",
+        "strokeWeight": 1.275
+      },
+      "parent": {
+        "$ref": "layer298"
+      },
+      "select": false,
+      "path": "m 9 3.75 5.25 5.25 -5.25 5.25"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer301",
+    "params": {
+      "type": "text",
+      "name": "Lihat Purchase Request",
+      "x": 1591,
+      "y": 871,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Lihat Purchase Request",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer302",
+    "params": {
+      "type": "rectangle",
+      "name": "Transactions / solid table surface",
+      "x": 328,
+      "y": 952,
+      "width": 1552,
+      "height": 420,
+      "props": {
+        "fill": "#FFFFFF",
+        "cornerRadius": 26,
+        "stroke": "#EBEDF2",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "dropShadow",
+            "color": "#2032530A",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 26
+          }
+        ],
+        "cornerSmoothing": 0.65
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer303",
+    "params": {
+      "type": "text",
+      "name": "Dokumen Sales & Procurement Terbaru",
+      "x": 356,
+      "y": 978,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 20,
+        "fill": "#20232B",
+        "letterSpacing": -0.35
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Dokumen Sales & Procurement Terbaru",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer304",
+    "params": {
+      "type": "text",
+      "name": "Aktivitas operasional company Anda",
+      "x": 356,
+      "y": 1010,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12,
+        "fill": "#6E7480"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Aktivitas operasional company Anda",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer305",
+    "params": {
+      "type": "rectangle",
+      "name": "Lihat Semua",
+      "x": 1727,
+      "y": 976,
+      "width": 125,
+      "height": 44,
+      "props": {
+        "fill": "#FFFFFFBA",
+        "cornerRadius": 22,
+        "stroke": "#FFFFFFE8",
+        "strokeWeight": 1,
+        "strokeAlign": "inside",
+        "effects": [
+          {
+            "type": "backgroundBlur",
+            "radius": 24
+          },
+          {
+            "type": "innerShadow",
+            "color": "#FFFFFFE8",
+            "offset": [
+              0,
+              1
+            ],
+            "radius": 2
+          },
+          {
+            "type": "dropShadow",
+            "color": "#23345512",
+            "offset": [
+              0,
+              8
+            ],
+            "radius": 28
+          }
+        ]
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "effect.add",
+    "params": {
+      "ids": [
+        {
+          "$ref": "layer305"
+        }
+      ],
+      "type": "glass"
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer306",
+    "params": {
+      "type": "text",
+      "name": "Lihat Semua",
+      "x": 1745,
+      "y": 989,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 13,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Lihat Semua",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer307",
+    "params": {
+      "type": "text",
+      "name": "Dokumen",
+      "x": 356,
+      "y": 1053,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#8B92A0"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Dokumen",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer308",
+    "params": {
+      "type": "text",
+      "name": "Jenis",
+      "x": 618,
+      "y": 1053,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#8B92A0"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Jenis",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer309",
+    "params": {
+      "type": "text",
+      "name": "Relasi",
+      "x": 888,
+      "y": 1053,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#8B92A0"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Relasi",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer310",
+    "params": {
+      "type": "text",
+      "name": "Tanggal",
+      "x": 1280,
+      "y": 1053,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#8B92A0"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Tanggal",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer311",
+    "params": {
+      "type": "text",
+      "name": "Nilai",
+      "x": 1481,
+      "y": 1053,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#8B92A0"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Nilai",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer312",
+    "params": {
+      "type": "text",
+      "name": "Status",
+      "x": 1742,
+      "y": 1053,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#8B92A0"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Status",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer313",
+    "params": {
+      "type": "rectangle",
+      "name": "Table heading hairline",
+      "x": 352,
+      "y": 1079,
+      "width": 1504,
+      "height": 1,
+      "props": {
+        "fill": "#EAEDF3",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer314",
+    "params": {
+      "type": "text",
+      "name": "PAY-ALP-2026-00002",
+      "x": 356,
+      "y": 1098,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#3971B8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "PAY-ALP-2026-00002",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer315",
+    "params": {
+      "type": "text",
+      "name": "Payment",
+      "x": 618,
+      "y": 1098,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Payment",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer316",
+    "params": {
+      "type": "text",
+      "name": "CV Mitra Sejahtera",
+      "x": 888,
+      "y": 1098,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "CV Mitra Sejahtera",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer317",
+    "params": {
+      "type": "text",
+      "name": "4 Nov 2026",
+      "x": 1280,
+      "y": 1098,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#7F8796"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "4 Nov 2026",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer318",
+    "params": {
+      "type": "text",
+      "name": "Rp 485.000",
+      "x": 1481,
+      "y": 1098,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 485.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer319",
+    "params": {
+      "type": "rectangle",
+      "name": "Status / Dibukukan",
+      "x": 1742,
+      "y": 1092,
+      "width": 108,
+      "height": 28,
+      "props": {
+        "fill": "#EAF6EE",
+        "cornerRadius": 14
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer320",
+    "params": {
+      "type": "ellipse",
+      "name": "Status marker",
+      "x": 1754,
+      "y": 1103,
+      "width": 5,
+      "height": 5,
+      "props": {
+        "fill": "#3D9360"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer321",
+    "params": {
+      "type": "text",
+      "name": "Dibukukan",
+      "x": 1767,
+      "y": 1100,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#357D50"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Dibukukan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer322",
+    "params": {
+      "type": "rectangle",
+      "name": "Table row hairline",
+      "x": 352,
+      "y": 1128,
+      "width": 1504,
+      "height": 1,
+      "props": {
+        "fill": "#F0F2F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer323",
+    "params": {
+      "type": "text",
+      "name": "PINV-ALP-2026-00002",
+      "x": 356,
+      "y": 1143,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#3971B8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "PINV-ALP-2026-00002",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer324",
+    "params": {
+      "type": "text",
+      "name": "Purchase Invoice",
+      "x": 618,
+      "y": 1143,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Invoice",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer325",
+    "params": {
+      "type": "text",
+      "name": "CV Mitra Sejahtera",
+      "x": 888,
+      "y": 1143,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "CV Mitra Sejahtera",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer326",
+    "params": {
+      "type": "text",
+      "name": "4 Nov 2026",
+      "x": 1280,
+      "y": 1143,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#7F8796"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "4 Nov 2026",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer327",
+    "params": {
+      "type": "text",
+      "name": "Rp 485.000",
+      "x": 1481,
+      "y": 1143,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 485.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer328",
+    "params": {
+      "type": "rectangle",
+      "name": "Status / Dibukukan",
+      "x": 1742,
+      "y": 1137,
+      "width": 108,
+      "height": 28,
+      "props": {
+        "fill": "#EAF6EE",
+        "cornerRadius": 14
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer329",
+    "params": {
+      "type": "ellipse",
+      "name": "Status marker",
+      "x": 1754,
+      "y": 1148,
+      "width": 5,
+      "height": 5,
+      "props": {
+        "fill": "#3D9360"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer330",
+    "params": {
+      "type": "text",
+      "name": "Dibukukan",
+      "x": 1767,
+      "y": 1145,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#357D50"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Dibukukan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer331",
+    "params": {
+      "type": "rectangle",
+      "name": "Table row hairline",
+      "x": 352,
+      "y": 1173,
+      "width": 1504,
+      "height": 1,
+      "props": {
+        "fill": "#F0F2F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer332",
+    "params": {
+      "type": "text",
+      "name": "GRN-ALP-2026-00002",
+      "x": 356,
+      "y": 1188,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#3971B8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "GRN-ALP-2026-00002",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer333",
+    "params": {
+      "type": "text",
+      "name": "Purchase Receipt",
+      "x": 618,
+      "y": 1188,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Receipt",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer334",
+    "params": {
+      "type": "text",
+      "name": "CV Mitra Sejahtera",
+      "x": 888,
+      "y": 1188,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "CV Mitra Sejahtera",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer335",
+    "params": {
+      "type": "text",
+      "name": "4 Nov 2026",
+      "x": 1280,
+      "y": 1188,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#7F8796"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "4 Nov 2026",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer336",
+    "params": {
+      "type": "text",
+      "name": "Rp 485.000",
+      "x": 1481,
+      "y": 1188,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 485.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer337",
+    "params": {
+      "type": "rectangle",
+      "name": "Status / Dibukukan",
+      "x": 1742,
+      "y": 1182,
+      "width": 108,
+      "height": 28,
+      "props": {
+        "fill": "#EAF6EE",
+        "cornerRadius": 14
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer338",
+    "params": {
+      "type": "ellipse",
+      "name": "Status marker",
+      "x": 1754,
+      "y": 1193,
+      "width": 5,
+      "height": 5,
+      "props": {
+        "fill": "#3D9360"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer339",
+    "params": {
+      "type": "text",
+      "name": "Dibukukan",
+      "x": 1767,
+      "y": 1190,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#357D50"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Dibukukan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer340",
+    "params": {
+      "type": "rectangle",
+      "name": "Table row hairline",
+      "x": 352,
+      "y": 1218,
+      "width": 1504,
+      "height": 1,
+      "props": {
+        "fill": "#F0F2F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer341",
+    "params": {
+      "type": "text",
+      "name": "PO-ALP-2026-00002",
+      "x": 356,
+      "y": 1233,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#3971B8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "PO-ALP-2026-00002",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer342",
+    "params": {
+      "type": "text",
+      "name": "Purchase Order",
+      "x": 618,
+      "y": 1233,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Order",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer343",
+    "params": {
+      "type": "text",
+      "name": "CV Mitra Sejahtera",
+      "x": 888,
+      "y": 1233,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "CV Mitra Sejahtera",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer344",
+    "params": {
+      "type": "text",
+      "name": "4 Nov 2026",
+      "x": 1280,
+      "y": 1233,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#7F8796"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "4 Nov 2026",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer345",
+    "params": {
+      "type": "text",
+      "name": "Rp 485.000",
+      "x": 1481,
+      "y": 1233,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 485.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer346",
+    "params": {
+      "type": "rectangle",
+      "name": "Status / Dibukukan",
+      "x": 1742,
+      "y": 1227,
+      "width": 108,
+      "height": 28,
+      "props": {
+        "fill": "#EAF6EE",
+        "cornerRadius": 14
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer347",
+    "params": {
+      "type": "ellipse",
+      "name": "Status marker",
+      "x": 1754,
+      "y": 1238,
+      "width": 5,
+      "height": 5,
+      "props": {
+        "fill": "#3D9360"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer348",
+    "params": {
+      "type": "text",
+      "name": "Dibukukan",
+      "x": 1767,
+      "y": 1235,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#357D50"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Dibukukan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer349",
+    "params": {
+      "type": "rectangle",
+      "name": "Table row hairline",
+      "x": 352,
+      "y": 1263,
+      "width": 1504,
+      "height": 1,
+      "props": {
+        "fill": "#F0F2F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer350",
+    "params": {
+      "type": "text",
+      "name": "PR-ALP-2026-00003",
+      "x": 356,
+      "y": 1278,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#3971B8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "PR-ALP-2026-00003",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer351",
+    "params": {
+      "type": "text",
+      "name": "Purchase Request",
+      "x": 618,
+      "y": 1278,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Purchase Request",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer352",
+    "params": {
+      "type": "text",
+      "name": "PT Sumber Makmur",
+      "x": 888,
+      "y": 1278,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "PT Sumber Makmur",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer353",
+    "params": {
+      "type": "text",
+      "name": "3 Nov 2026",
+      "x": 1280,
+      "y": 1278,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#7F8796"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "3 Nov 2026",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer354",
+    "params": {
+      "type": "text",
+      "name": "Rp 500.000",
+      "x": 1481,
+      "y": 1278,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 500.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer355",
+    "params": {
+      "type": "rectangle",
+      "name": "Status / Disetujui",
+      "x": 1742,
+      "y": 1272,
+      "width": 108,
+      "height": 28,
+      "props": {
+        "fill": "#EAF6EE",
+        "cornerRadius": 14
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer356",
+    "params": {
+      "type": "ellipse",
+      "name": "Status marker",
+      "x": 1754,
+      "y": 1283,
+      "width": 5,
+      "height": 5,
+      "props": {
+        "fill": "#3D9360"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer357",
+    "params": {
+      "type": "text",
+      "name": "Disetujui",
+      "x": 1767,
+      "y": 1280,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#357D50"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Disetujui",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer358",
+    "params": {
+      "type": "rectangle",
+      "name": "Table row hairline",
+      "x": 352,
+      "y": 1308,
+      "width": 1504,
+      "height": 1,
+      "props": {
+        "fill": "#F0F2F6",
+        "cornerRadius": 0
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer359",
+    "params": {
+      "type": "text",
+      "name": "RCV-ALP-2026-00001",
+      "x": 356,
+      "y": 1323,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#3971B8"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "RCV-ALP-2026-00001",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer360",
+    "params": {
+      "type": "text",
+      "name": "Payment",
+      "x": 618,
+      "y": 1323,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Payment",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer361",
+    "params": {
+      "type": "text",
+      "name": "PT Cakrawala Retail",
+      "x": 888,
+      "y": 1323,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#596170"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "PT Cakrawala Retail",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer362",
+    "params": {
+      "type": "text",
+      "name": "21 Okt 2026",
+      "x": 1280,
+      "y": 1323,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 12.5,
+        "fill": "#7F8796"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "21 Okt 2026",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer363",
+    "params": {
+      "type": "text",
+      "name": "Rp 2.220.000",
+      "x": 1481,
+      "y": 1323,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 12.5,
+        "fill": "#20232B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Rp 2.220.000",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer364",
+    "params": {
+      "type": "rectangle",
+      "name": "Status / Dibukukan",
+      "x": 1742,
+      "y": 1317,
+      "width": 108,
+      "height": 28,
+      "props": {
+        "fill": "#EAF6EE",
+        "cornerRadius": 14
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer365",
+    "params": {
+      "type": "ellipse",
+      "name": "Status marker",
+      "x": 1754,
+      "y": 1328,
+      "width": 5,
+      "height": 5,
+      "props": {
+        "fill": "#3D9360"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer366",
+    "params": {
+      "type": "text",
+      "name": "Dibukukan",
+      "x": 1767,
+      "y": 1325,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Medium",
+        "fontSize": 11,
+        "fill": "#357D50"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Dibukukan",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer367",
+    "params": {
+      "type": "text",
+      "name": "Angka operasional yang dibukukan; belum termasuk pajak dan belum berup",
+      "x": 332,
+      "y": 1397,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#969DAA"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Angka operasional yang dibukukan; belum termasuk pajak dan belum berupa laporan keuangan lengkap.",
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer368",
+    "params": {
+      "type": "ellipse",
+      "name": "Snapshot connection indicator",
+      "x": 1725,
+      "y": 1401,
+      "width": 6,
+      "height": 6,
+      "props": {
+        "fill": "#278A5B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "select": false
+    }
+  },
+  {
+    "command": "node.create",
+    "as": "layer369",
+    "params": {
+      "type": "text",
+      "name": "Terhubung ke API",
+      "x": 1742,
+      "y": 1396,
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "Regular",
+        "fontSize": 11,
+        "fill": "#87938B"
+      },
+      "parent": {
+        "$ref": "canvas"
+      },
+      "text": "Terhubung ke API",
+      "select": false
+    }
+  },
+  {
+    "command": "style.create",
+    "params": {
+      "type": "paint",
+      "name": "Comparison/Apple/Accent",
+      "value": [
+        "#007AFF"
+      ],
+      "description": "Action and current navigation only."
+    }
+  },
+  {
+    "command": "style.create",
+    "params": {
+      "type": "paint",
+      "name": "Comparison/Apple/Content",
+      "value": [
+        "#FFFFFF"
+      ],
+      "description": "Solid finance and table surface."
+    }
+  },
+  {
+    "command": "style.create",
+    "params": {
+      "type": "paint",
+      "name": "Comparison/Apple/Ink",
+      "value": [
+        "#20232B"
+      ],
+      "description": "Primary text with strong contrast."
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Comparison label",
+      "x": 0,
+      "y": 1566,
+      "text": "02 / APPLE-INSPIRED",
+      "props": {
+        "fontFamily": "Inter",
+        "fontStyle": "SemiBold",
+        "fontSize": 12,
+        "letterSpacing": 1.7,
+        "fill": "#7D8799"
+      }
+    }
+  },
+  {
+    "command": "node.create",
+    "params": {
+      "type": "text",
+      "name": "Comparison description",
+      "x": 0,
+      "y": 1595,
+      "text": "Liquid Glass · Hierarki yang lebih jelas · Data Alpha yang sama",
+      "props": {
+        "fontFamily": "Inter",
+        "fontSize": 22,
+        "fill": "#3E485B"
+      }
+    }
+  }
+]

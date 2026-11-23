@@ -1,0 +1,32 @@
+{
+  "originalPreserved": true,
+  "originalHash": "de51c728ffccacb9c4148ea57f56d95753503a8796c7fff7c53e9c6e0909086e",
+  "frames": [
+    {
+      "id": 2,
+      "name": "Enterprise ERP / Dashboard / Desktop 1920",
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1440
+    },
+    {
+      "id": 362,
+      "name": "02 / Apple-inspired — Liquid Glass",
+      "x": 0,
+      "y": 1660,
+      "width": 1920,
+      "height": 1440
+    }
+  ],
+  "newLayerCount": 370,
+  "effectTypes": [
+    "layerBlur",
+    "backgroundBlur",
+    "innerShadow",
+    "dropShadow",
+    "glass"
+  ],
+  "glassCount": 12,
+  "textCount": 121
+}

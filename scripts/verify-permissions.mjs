@@ -1,0 +1,96 @@
+import "reflect-metadata";
+import assert from "node:assert/strict";
+import { randomUUID } from "node:crypto";
+import { compare } from "bcryptjs";
+import { config } from "dotenv";
+import { PrismaClient } from "@prisma/client";
+import { requireCompanyWrite } from "../apps/api/dist/auth/write-access.js";
+import { MasterDataService } from "../apps/api/dist/master-data/master-data.module.js";
+config({ path: new URL("../apps/api/.env", import.meta.url), quiet: true });
+if (process.env.NODE_ENV === "production") throw new Error("Development verification only");
+const prisma = new PrismaClient(), base = process.env.TEST_API_URL || "http://127.0.0.1:4010/api", prefix = `Q${Date.now().toString(36).toUpperCase()}`, companies = [], users = new Set();
+let cookie = "", checks = 0;
+async function request(path, method = "GET", body, session = cookie) { return fetch(base + path, { method, headers: { "Content-Type": "application/json", ...(session ? { Cookie: session } : {}) }, ...(body ? { body: JSON.stringify(body) } : {}) }); }
+async function json(path, method = "GET", body, expected = 200, session = cookie) { const r = await request(path, method, body, session), data = await r.json(); assert.equal(r.status, expected, `${method} ${path}: ${JSON.stringify(data)}`); checks++; return data; }
+async function login(email, password = process.env.DEMO_PASSWORD, expected = 201) { const r = await request("/auth/login", "POST", { email, password }, ""); assert.equal(r.status, expected); return r.headers.get("set-cookie")?.split(";")[0] || ""; }
+const initialPassword = `Initial!${randomUUID()}`, newPassword = `Changed!${randomUUID()}`;
+try {
+  cookie = await login("admin@enterprise.local"); const manager = await login("reviewer@enterprise.local");
+  const admin = await prisma.user.findUniqueOrThrow({ where: { email: "admin@enterprise.local" } });
+  for (const suffix of ["A", "B"]) { const c = await json("/companies", "POST", { code: prefix + suffix, name: `QA Access ${suffix}`, industry: "Pengujian", city: "Jakarta", currency: "IDR", status: "ACTIVE", address: "", email: "", phone: "", taxId: "" }, 201); companies.push(c); }
+  const [a, b] = companies, path = `/companies/${a.id}/access`, pathB = `/companies/${b.id}/access`;
+  const grant = (body, expected = 201, session = cookie, target = path) => json(target + "/users", "POST", body, expected, session);
+  const existing = (email, role = "VIEWER") => ({ mode: "EXISTING", requestKey: randomUUID(), email, role, reason: "QA company access" });
+  const body = { mode: "NEW", requestKey: randomUUID(), email: `  QA.${prefix}@Example.local  `, name: "QA Access User", initialPassword, role: "VIEWER", reason: "QA first account", companyId: b.id, userActive: false };
+  let member = await grant(body); users.add(member.userId); assert.equal(member.companyId, a.id); assert.equal(member.email, body.email.trim().toLowerCase()); assert.equal(member.mustChangePassword, true);
+  for (const key of ["passwordHash", "initialPassword", "requestHash", "requestKey", "sessionVersion", "createdBy"]) assert.ok(!(key in member));
+  const stored = await prisma.user.findUniqueOrThrow({ where: { id: member.userId } }); assert.equal(stored.active, true); assert.notEqual(stored.passwordHash, initialPassword); assert.equal(await compare(initialPassword, stored.passwordHash), true);
+  assert.equal((await grant(body)).userId, member.userId); await grant({ ...body, reason: "Different request" }, 409); await grant({ ...body, requestKey: randomUUID() }, 409);
+  await grant({ ...body, email: "invalid", requestKey: randomUUID() }, 400); await grant({ ...body, email: `weak.${prefix}@example.local`, initialPassword: "weak", requestKey: randomUUID() }, 400);
+  await grant(existing("missing@example.local"), 404); await grant(existing(member.email), 409);
+  await grant(existing("reviewer@enterprise.local", "MANAGER")); await json(path + "/users", "GET", undefined, 403, manager); await grant(existing("viewer@enterprise.local"), 403, manager);
+  const bMember = await grant(existing(member.email, "MANAGER"), 201, cookie, pathB); assert.equal(bMember.userId, member.userId);
+  const profileBefore = await prisma.user.findUniqueOrThrow({ where: { id: member.userId } }); assert.equal(profileBefore.passwordHash, stored.passwordHash); assert.equal(profileBefore.name, stored.name);
+  const forcedCookie = await login(member.email, initialPassword);
+  assert.equal((await json("/auth/me", "GET", undefined, 200, forcedCookie)).mustChangePassword, true);
+  const blocked = await json(`/companies/${a.id}/master-summary`, "GET", undefined, 403, forcedCookie); assert.equal(blocked.code, "PASSWORD_CHANGE_REQUIRED");
+  await json("/auth/change-password", "POST", { currentPassword: "IncorrectPassword!", newPassword, confirmPassword: newPassword }, 400, forcedCookie);
+  await json("/auth/change-password", "POST", { currentPassword: initialPassword, newPassword: "short", confirmPassword: "short" }, 400, forcedCookie);
+  await json("/auth/change-password", "POST", { currentPassword: initialPassword, newPassword, confirmPassword: newPassword }, 201, forcedCookie);
+  await json("/auth/me", "GET", undefined, 401, forcedCookie); await login(member.email, initialPassword, 401);
+  const userCookie = await login(member.email, newPassword), user = await json("/auth/me", "GET", undefined, 200, userCookie); assert.equal(user.mustChangePassword, false); assert.equal(user.companies.length, 2);
+  assert.equal((await prisma.user.findUniqueOrThrow({ where: { id: member.userId } })).sessionVersion, 1);
+  const events = await json(`/auth/security-events?userId=${admin.id}`, "GET", undefined, 200, userCookie); assert.deepEqual(events.map((e) => e.action).sort(), ["ACCOUNT_CREATED", "PASSWORD_CHANGED"]);
+  assert.equal((await grant(body)).mustChangePassword, false); assert.equal((await prisma.user.findUniqueOrThrow({ where: { id: member.userId } })).sessionVersion, 1);
+  const patch = (row, changes, expected = 200, session = cookie) => json(path + `/users/${row.userId}`, "PATCH", { role: row.role, active: row.active, reason: "QA access update", expectedUpdatedAt: row.updatedAt, ...changes }, expected, session);
+  member = (await json(path + `/users?q=${encodeURIComponent(member.email)}`)).data[0];
+  const master = { code: "QA-ROLE", name: "QA Permission Supplier", category: "Operasional", email: "", phone: "", description: "", status: "ACTIVE", address: "", city: "", taxId: "", paymentTermsDays: 30 };
+  await json(`/companies/${a.id}/master/suppliers`, "POST", master, 403, userCookie); await json(path + "/users", "GET", undefined, 403, userCookie);
+  const old = member; member = await patch(member, { role: "MANAGER" }); await patch(old, { role: "ADMIN" }, 409);
+  await json(`/companies/${a.id}/master/suppliers`, "POST", master, 201, userCookie); await json(path + "/users", "GET", undefined, 403, userCookie);
+  member = await patch(member, { role: "VIEWER" }); await json(`/companies/${a.id}/master/suppliers`, "POST", { ...master, code: "QA-DENIED" }, 403, userCookie);
+  const passwordState = await prisma.user.findUniqueOrThrow({ where: { id: member.userId } });
+  member = await patch(member, { active: false, userActive: false, mustChangePassword: true, passwordHash: "ignored", name: "ignored" });
+  assert.deepEqual(await prisma.user.findUniqueOrThrow({ where: { id: member.userId } }), passwordState);
+  const currentProfile = await json("/auth/me", "GET", undefined, 200, userCookie); assert.deepEqual(currentProfile.companies.map((c) => c.id), [b.id]);
+  await json(`/companies/${a.id}/master-summary`, "GET", undefined, 403, userCookie); await json(`/companies/${b.id}/master-summary`, "GET", undefined, 200, userCookie);
+  await json(`/companies/${b.id}/master/suppliers`, "POST", { ...master, code: "QA-OTHER" }, 201, userCookie);
+  await assert.rejects(() => prisma.$transaction((tx) => requireCompanyWrite(tx, a.id, member.userId)), (error) => error.getStatus?.() === 403);
+  await assert.rejects(() => new MasterDataService(prisma).save(a.id, "suppliers", member.userId, { ...master, code: "QA-DIRECT" }), (error) => error.getStatus?.() === 403);
+  member = await patch(member, { active: true }); assert.equal((await json("/auth/me", "GET", undefined, 200, userCookie)).companies.length, 2);
+  const self = (await json(path + "/users?role=ADMIN")).data.find((m) => m.userId === admin.id); await patch(self, { role: "VIEWER" }, 409);
+  await patch(member, { role: "SUPER_ADMIN" }, 400); await json(path + `/users/${member.userId}`, "PATCH", { role: "VIEWER", active: false, reason: "No version" }, 400);
+  const foreignOnly = await grant({ mode: "NEW", requestKey: randomUUID(), email: `foreign.${prefix}@example.local`, name: "QA Foreign User", initialPassword, role: "VIEWER", reason: "QA foreign membership" }, 201, cookie, pathB); users.add(foreignOnly.userId);
+  await json(path + `/users/${foreignOnly.userId}`, "PATCH", { role: "ADMIN", active: true, reason: "Foreign request", expectedUpdatedAt: foreignOnly.updatedAt }, 404);
+  const concurrentBody = { mode: "NEW", requestKey: randomUUID(), email: `race.${prefix}@example.local`, name: "QA Concurrent User", initialPassword, role: "VIEWER", reason: "QA concurrent grant" };
+  const races = await Promise.all([request(path + "/users", "POST", concurrentBody), request(path + "/users", "POST", concurrentBody)]);
+  const granted = await Promise.all(races.filter((r) => r.status === 201).map((r) => r.json())); for (const row of granted) users.add(row.userId);
+  assert.ok(granted.length >= 1); assert.ok(races.every((r) => [201, 409].includes(r.status)));
+  const raceMember = granted[0]; assert.ok(granted.every((row) => row.userId === raceMember.userId)); assert.equal((await grant(concurrentBody)).userId, raceMember.userId); assert.equal(await prisma.user.count({ where: { email: concurrentBody.email.toLowerCase() } }), 1);
+  assert.equal(await prisma.auditLog.count({ where: { companyId: a.id, entity: "memberships", entityId: raceMember.userId, action: "GRANT" } }), 1);
+  member = await patch(member, { role: "ADMIN" }); await grant(body, 409, userCookie);
+  const currentSelf = (await json(path + "/users?role=ADMIN")).data.find((m) => m.userId === admin.id);
+  const demotions = await Promise.all([request(path + `/users/${member.userId}`, "PATCH", { role: "MANAGER", active: true, reason: "QA concurrent admin change", expectedUpdatedAt: member.updatedAt }), request(path + `/users/${admin.id}`, "PATCH", { role: "MANAGER", active: true, reason: "QA concurrent admin change", expectedUpdatedAt: currentSelf.updatedAt }, userCookie)]);
+  assert.equal(demotions.filter((r) => r.status === 200).length, 1); assert.ok(demotions.every((r) => [200, 403, 409].includes(r.status)));
+  const memberships = await prisma.membership.findMany({ where: { companyId: a.id } }); const retainedCookie = memberships.find((m) => m.userId === admin.id).role === "ADMIN" ? cookie : userCookie;
+  const listed = await json(path + "/users?pageSize=1&page=999", "GET", undefined, 200, retainedCookie); assert.equal(listed.activeAdmins, 1); assert.equal(listed.meta.page, listed.meta.pageCount);
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Jakarta" }), auditPath = path + `/audit?from=${today}&to=${today}&userId=${member.userId}`;
+  const audit = await json(auditPath, "GET", undefined, 200, retainedCookie); assert.ok(audit.meta.total >= 6); assert.ok(audit.data.every((r) => r.userId === member.userId && r.after.email === member.email));
+  const text = JSON.stringify(audit); for (const secret of [initialPassword, newPassword, stored.passwordHash, "requestHash", "passwordHash", "sessionVersion"]) assert.ok(!text.includes(secret));
+  assert.equal((await json(auditPath + "&action=GRANT", "GET", undefined, 200, retainedCookie)).meta.total, 1);
+  assert.equal((await json(path + "/audit?from=2025-01-01&to=2025-01-01", "GET", undefined, 200, retainedCookie)).meta.total, 0);
+  await json(path + `/audit?from=${today}&to=${today}&userId=${foreignOnly.userId}`, "GET", undefined, 404, retainedCookie);
+  await json(path + "/users?sort=passwordHash", "GET", undefined, 400, retainedCookie); await json(path + "/users?pageSize=101", "GET", undefined, 400, retainedCookie);
+  await json(path + "/users", "GET", undefined, 401, ""); await json("/companies/beta/access/users", "GET", undefined, 403, manager);
+  assert.equal((await request(`/companies/${a.id}`, "DELETE", undefined, retainedCookie)).status, 204);
+  await json(path + "/users", "GET", undefined, 200, retainedCookie); await grant(existing("viewer@enterprise.local"), 403, retainedCookie);
+  console.log(`Permissions passed (${checks} HTTP expectations): scoped grants, fixed Roles, first-login password enforcement, bcrypt hashing, session revocation, live Role changes, per-company deactivation/reactivation, direct-service denial, idempotency/concurrent grants, stale edits, admin race protection, private audited history, protected global identity and archived access.`);
+} finally {
+  if (companies.length) await prisma.$transaction(async (tx) => {
+    for (const c of companies) assert.equal((await tx.company.findUnique({ where: { id: c.id } }))?.code, c.code);
+    const ids = companies.map((c) => c.id);
+    await tx.masterRecord.deleteMany({ where: { companyId: { in: ids } } }); await tx.auditLog.deleteMany({ where: { companyId: { in: ids } } }); await tx.membership.deleteMany({ where: { companyId: { in: ids } } }); await tx.company.deleteMany({ where: { id: { in: ids } } });
+    await tx.userSecurityEvent.deleteMany({ where: { userId: { in: [...users] } } }); await tx.user.deleteMany({ where: { id: { in: [...users] } } });
+  });
+  await prisma.$disconnect();
+}

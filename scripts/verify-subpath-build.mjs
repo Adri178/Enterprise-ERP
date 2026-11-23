@@ -1,0 +1,15 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { normalizeBasePath } from "@erp/shared";
+const prefix=normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH || "/erp"), build=new URL("../apps/web/.next/",import.meta.url);
+const routes=JSON.parse(readFileSync(new URL("routes-manifest.json",build),"utf8"));
+assert.equal(routes.basePath,prefix);
+const rewrites=Array.isArray(routes.rewrites)?routes.rewrites:Object.values(routes.rewrites).flat();
+const api=rewrites.find(r=>r.source===`${prefix}/api/:path*`); assert.ok(api,"API proxy is mounted under the application prefix"); assert.ok(api.destination.endsWith("/api/:path*"));
+const login=readFileSync(new URL("server/app/login.html",build),"utf8"), home=JSON.parse(readFileSync(new URL("server/app/index.meta",build),"utf8"));
+assert.ok(login.includes(`href="${prefix}/dashboard"`),"Next links retain basePath");
+const assets=[...login.matchAll(/(?:src|href)="([^" ]*\/_next\/static\/[^" ]+)"/g)].map(m=>m[1]);
+assert.ok(assets.length>0); assert.ok(assets.every(p=>p.startsWith(`${prefix}/_next/`)),"all initial assets retain basePath");
+assert.equal(home.status,307); assert.equal(home.headers.location,`${prefix}/dashboard`,"prerendered redirect metadata retains basePath");
+const pages=JSON.parse(readFileSync(new URL("prerender-manifest.json",build),"utf8"));
+console.log(`Subpath build passed: ${prefix}, ${Object.keys(pages.routes).length} prerendered entries, prefixed links/assets/redirect and API rewrite.`);

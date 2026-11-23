@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "All prototype destinations, variable bindings and mode actions resolve",
+    "Every modal has close and Escape interactions",
+    "Exact primary module hierarchy is preserved",
+    "Prototype action boundary is local navigation and simulation only",
+    "Alpha: Company labels, KPI, table/graph empty state and scoped search",
+    "Beta: Company labels, KPI, table/graph empty state and scoped search",
+    "Gamma: Company labels, KPI, table/graph empty state and scoped search",
+    "All: document filter shows exactly one row group",
+    "Procurement: document filter shows exactly one row group",
+    "Sales: document filter shows exactly one row group",
+    "Transaction preset bindings render quantity, total and Supplier correctly"
+  ],
+  "passed": 11,
+  "nodes": 1846,
+  "interactions": 308,
+  "actions": 351,
+  "limitations": [
+    "Click playback was not tested: native app access approval timed out.",
+    "Text entry uses presets; company Beta/Gamma are empty prototype scenarios.",
+    "Module pages outside the Dashboard slice show a scope notice.",
+    "This verification checks native definitions and rendered variable states, not runtime web ERP behavior."
+  ]
+}

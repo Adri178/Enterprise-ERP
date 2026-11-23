@@ -1,0 +1,4128 @@
+{
+  "document": 5,
+  "dashboard": 362,
+  "documents": 762,
+  "sourceHash": "09aa0b9e64337142cea43b06e7c63de97404947611c247695381f50157b02a94",
+  "companyCollection": "VariableCollectionId:1",
+  "frames": {
+    "Company switcher": 741,
+    "Documents": 762,
+    "Detail PAY-ALP-2026-00002": 951,
+    "Detail PINV-ALP-2026-00002": 978,
+    "Detail GRN-ALP-2026-00002": 1010,
+    "Detail PO-ALP-2026-00002": 1042,
+    "Detail PR-ALP-2026-00003": 1074,
+    "Detail RCV-ALP-2026-00001": 1106,
+    "Detail SINV-ALP-2026-00001": 1133,
+    "Detail DN-ALP-2026-00001": 1162,
+    "Success": 1325,
+    "Supplier presets": 1336,
+    "Buat Purchase Request": 1352,
+    "Customers presets": 1387,
+    "Buat Quotation": 1403,
+    "Buat Transaksi menu": 1438,
+    "Global search": 1454,
+    "Period scope": 1477,
+    "Notifications": 1488,
+    "Help": 1499,
+    "Profile": 1513,
+    "Menu Organization": 1529,
+    "Informasi Company": 1535,
+    "Informasi Branch": 1551,
+    "Informasi Department": 1567,
+    "Menu Master Data": 1583,
+    "Informasi Items": 1589,
+    "Informasi Customers": 1605,
+    "Informasi Suppliers": 1621,
+    "Menu Procurement": 1637,
+    "Menu Inventory": 1668,
+    "Informasi Warehouses": 1674,
+    "Informasi Stock Overview": 1690,
+    "Informasi Stock Movement": 1706,
+    "Informasi Stock Transfer": 1722,
+    "Informasi Stock Adjustment": 1738,
+    "Menu Sales & CRM": 1754,
+    "Informasi Leads": 1760,
+    "Menu Accounting": 1796,
+    "Informasi Chart of Accounts": 1802,
+    "Informasi Journal Entries": 1818,
+    "Informasi Payments": 1834,
+    "Informasi Accounts Receivable": 1850,
+    "Informasi Accounts Payable": 1866,
+    "Menu Human Resources": 1882,
+    "Informasi Employees": 1888,
+    "Informasi Leave Requests": 1904,
+    "Informasi Attendance": 1920,
+    "Menu Manufacturing": 1936,
+    "Informasi Bill of Materials": 1942,
+    "Informasi Work Orders": 1958,
+    "Informasi Production": 1974,
+    "Menu Reports & Analytics": 1990,
+    "Informasi Ringkasan Company": 1996,
+    "Informasi Laporan Sales": 2012,
+    "Informasi Laporan Procurement": 2028,
+    "Informasi Laporan Stock": 2044,
+    "Menu Settings & Permissions": 2060,
+    "Informasi Users": 2066,
+    "Informasi Roles": 2082,
+    "Informasi Permissions": 2098,
+    "Informasi Audit Logs": 2114,
+    "Document filter": 2130
+  },
+  "interactions": [
+    {
+      "source": "p12",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p7",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p17",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:1",
+          "mode": "Alpha"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p22",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:1",
+          "mode": "Beta"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p27",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:1",
+          "mode": "Gamma"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p34",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "navigate",
+          "dest": 362
+        }
+      ]
+    },
+    {
+      "source": "p45",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p40",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p66",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p72",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p67",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p98",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p104",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p99",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p130",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p136",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p131",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p162",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p168",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p163",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p194",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p200",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p195",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p221",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p227",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p222",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p250",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p256",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p251",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p279",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p280",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 978
+        }
+      ]
+    },
+    {
+      "source": "p281",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1010
+        }
+      ]
+    },
+    {
+      "source": "p282",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1042
+        }
+      ]
+    },
+    {
+      "source": "p283",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1074
+        }
+      ]
+    },
+    {
+      "source": "p284",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1133
+        }
+      ]
+    },
+    {
+      "source": "p285",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1162
+        }
+      ]
+    },
+    {
+      "source": "p293",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 951,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p300",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 978,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p307",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1010,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p314",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1042,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p321",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1074,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p328",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1106,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p335",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1133,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p342",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1162,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p351",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 951,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p358",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 978,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p365",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1010,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p372",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1042,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p379",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1074,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p388",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1106,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p395",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1133,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p402",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1162,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p419",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p414",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p424",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 362
+        }
+      ]
+    },
+    {
+      "source": "p430",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p425",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p435",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:8",
+          "value": "Supplier Contoh A"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p440",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:8",
+          "value": "Supplier Contoh B"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p446",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p441",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p453",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1336,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p463",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:9",
+          "value": "1"
+        },
+        {
+          "type": "setVariable",
+          "variable": "VariableID:10",
+          "value": "Rp 97.000"
+        }
+      ]
+    },
+    {
+      "source": "p466",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:9",
+          "value": "2"
+        },
+        {
+          "type": "setVariable",
+          "variable": "VariableID:10",
+          "value": "Rp 194.000"
+        }
+      ]
+    },
+    {
+      "source": "p472",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p475",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1325
+        }
+      ]
+    },
+    {
+      "source": "p481",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p476",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p486",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:8",
+          "value": "Customers Contoh A"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p491",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:8",
+          "value": "Customers Contoh B"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p497",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p492",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p504",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1387,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p514",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:9",
+          "value": "1"
+        },
+        {
+          "type": "setVariable",
+          "variable": "VariableID:10",
+          "value": "Rp 97.000"
+        }
+      ]
+    },
+    {
+      "source": "p517",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:9",
+          "value": "2"
+        },
+        {
+          "type": "setVariable",
+          "variable": "VariableID:10",
+          "value": "Rp 194.000"
+        }
+      ]
+    },
+    {
+      "source": "p523",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p526",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1325
+        }
+      ]
+    },
+    {
+      "source": "p532",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p527",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p537",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:8",
+          "value": "Supplier Contoh A"
+        },
+        {
+          "type": "setVariable",
+          "variable": "VariableID:9",
+          "value": "1"
+        },
+        {
+          "type": "setVariable",
+          "variable": "VariableID:10",
+          "value": "Rp 97.000"
+        },
+        {
+          "type": "swapOverlay",
+          "dest": 1352
+        }
+      ]
+    },
+    {
+      "source": "p542",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariable",
+          "variable": "VariableID:8",
+          "value": "Customers Contoh A"
+        },
+        {
+          "type": "setVariable",
+          "variable": "VariableID:9",
+          "value": "1"
+        },
+        {
+          "type": "setVariable",
+          "variable": "VariableID:10",
+          "value": "Rp 97.000"
+        },
+        {
+          "type": "swapOverlay",
+          "dest": 1403
+        }
+      ]
+    },
+    {
+      "source": "p548",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p543",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p555",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p560",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1042
+        }
+      ]
+    },
+    {
+      "source": "p565",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 362
+        }
+      ]
+    },
+    {
+      "source": "p571",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p566",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p576",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p582",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p577",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p587",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p593",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p588",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p601",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p607",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p602",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p612",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1499
+        }
+      ]
+    },
+    {
+      "source": "p617",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 362
+        }
+      ]
+    },
+    {
+      "source": "p623",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p618",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p629",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p624",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p634",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1529
+        }
+      ]
+    },
+    {
+      "source": "p639",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1535
+        }
+      ]
+    },
+    {
+      "source": "p645",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p640",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p650",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1529
+        }
+      ]
+    },
+    {
+      "source": "p655",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1551
+        }
+      ]
+    },
+    {
+      "source": "p661",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p656",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p666",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1529
+        }
+      ]
+    },
+    {
+      "source": "p671",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1567
+        }
+      ]
+    },
+    {
+      "source": "p677",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p672",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p683",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p678",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p688",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1583
+        }
+      ]
+    },
+    {
+      "source": "p693",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1589
+        }
+      ]
+    },
+    {
+      "source": "p699",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p694",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p704",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1583
+        }
+      ]
+    },
+    {
+      "source": "p709",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1605
+        }
+      ]
+    },
+    {
+      "source": "p715",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p710",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p720",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1583
+        }
+      ]
+    },
+    {
+      "source": "p725",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1621
+        }
+      ]
+    },
+    {
+      "source": "p731",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p726",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p736",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Procurement"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p741",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Procurement"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p746",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Procurement"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p751",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Procurement"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p756",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Procurement"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p762",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p757",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p768",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p763",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p773",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1668
+        }
+      ]
+    },
+    {
+      "source": "p778",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1674
+        }
+      ]
+    },
+    {
+      "source": "p784",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p779",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p789",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1668
+        }
+      ]
+    },
+    {
+      "source": "p794",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1690
+        }
+      ]
+    },
+    {
+      "source": "p800",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p795",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p805",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1668
+        }
+      ]
+    },
+    {
+      "source": "p810",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1706
+        }
+      ]
+    },
+    {
+      "source": "p816",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p811",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p821",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1668
+        }
+      ]
+    },
+    {
+      "source": "p826",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1722
+        }
+      ]
+    },
+    {
+      "source": "p832",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p827",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p837",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1668
+        }
+      ]
+    },
+    {
+      "source": "p842",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1738
+        }
+      ]
+    },
+    {
+      "source": "p848",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p843",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p854",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p849",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p859",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1754
+        }
+      ]
+    },
+    {
+      "source": "p864",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1760
+        }
+      ]
+    },
+    {
+      "source": "p869",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Sales"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p874",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Sales"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p879",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Sales"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p884",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Sales"
+        },
+        {
+          "type": "closeOverlay"
+        },
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p890",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p885",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p896",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p891",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p901",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1796
+        }
+      ]
+    },
+    {
+      "source": "p906",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1802
+        }
+      ]
+    },
+    {
+      "source": "p912",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p907",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p917",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1796
+        }
+      ]
+    },
+    {
+      "source": "p922",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1818
+        }
+      ]
+    },
+    {
+      "source": "p928",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p923",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p933",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1796
+        }
+      ]
+    },
+    {
+      "source": "p938",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1834
+        }
+      ]
+    },
+    {
+      "source": "p944",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p939",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p949",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1796
+        }
+      ]
+    },
+    {
+      "source": "p954",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1850
+        }
+      ]
+    },
+    {
+      "source": "p960",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p955",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p965",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1796
+        }
+      ]
+    },
+    {
+      "source": "p970",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1866
+        }
+      ]
+    },
+    {
+      "source": "p976",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p971",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p982",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p977",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p987",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1882
+        }
+      ]
+    },
+    {
+      "source": "p992",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1888
+        }
+      ]
+    },
+    {
+      "source": "p998",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p993",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1003",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1882
+        }
+      ]
+    },
+    {
+      "source": "p1008",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1904
+        }
+      ]
+    },
+    {
+      "source": "p1014",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1009",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1019",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1882
+        }
+      ]
+    },
+    {
+      "source": "p1024",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1920
+        }
+      ]
+    },
+    {
+      "source": "p1030",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1025",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1036",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1031",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1041",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1936
+        }
+      ]
+    },
+    {
+      "source": "p1046",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1942
+        }
+      ]
+    },
+    {
+      "source": "p1052",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1047",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1057",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1936
+        }
+      ]
+    },
+    {
+      "source": "p1062",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1958
+        }
+      ]
+    },
+    {
+      "source": "p1068",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1063",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1073",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1936
+        }
+      ]
+    },
+    {
+      "source": "p1078",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1974
+        }
+      ]
+    },
+    {
+      "source": "p1084",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1079",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1090",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1085",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1095",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1990
+        }
+      ]
+    },
+    {
+      "source": "p1100",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1996
+        }
+      ]
+    },
+    {
+      "source": "p1106",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1101",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1111",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1990
+        }
+      ]
+    },
+    {
+      "source": "p1116",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2012
+        }
+      ]
+    },
+    {
+      "source": "p1122",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1117",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1127",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1990
+        }
+      ]
+    },
+    {
+      "source": "p1132",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2028
+        }
+      ]
+    },
+    {
+      "source": "p1138",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1133",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1143",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 1990
+        }
+      ]
+    },
+    {
+      "source": "p1148",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2044
+        }
+      ]
+    },
+    {
+      "source": "p1154",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1149",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1160",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1155",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1165",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2060
+        }
+      ]
+    },
+    {
+      "source": "p1170",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2066
+        }
+      ]
+    },
+    {
+      "source": "p1176",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1171",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1181",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2060
+        }
+      ]
+    },
+    {
+      "source": "p1186",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2082
+        }
+      ]
+    },
+    {
+      "source": "p1192",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1187",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1197",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2060
+        }
+      ]
+    },
+    {
+      "source": "p1202",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2098
+        }
+      ]
+    },
+    {
+      "source": "p1208",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1203",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1213",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2060
+        }
+      ]
+    },
+    {
+      "source": "p1218",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "swapOverlay",
+          "dest": 2114
+        }
+      ]
+    },
+    {
+      "source": "p1224",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1219",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Escape"
+      },
+      "actions": [
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1229",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "All"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1234",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Procurement"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1239",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "setVariableMode",
+          "collection": "VariableCollectionId:3",
+          "mode": "Sales"
+        },
+        {
+          "type": "closeOverlay"
+        }
+      ]
+    },
+    {
+      "source": "p1240",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 2130,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1243",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1438,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            -186,
+            54
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1244",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 741,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            0,
+            52
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1245",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 741,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            0,
+            92
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1246",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1454,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1247",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1488,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            -414,
+            54
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1248",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 2060,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1249",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1513,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            0,
+            -346
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1250",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1499,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1251",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "navigate",
+          "dest": 362
+        }
+      ]
+    },
+    {
+      "source": "p1252",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1529,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1253",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1583,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1254",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1637,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1255",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1668,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1256",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1754,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1257",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1796,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1258",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1882,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1259",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1936,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1260",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1990,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1261",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 2060,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": 362,
+      "trigger": {
+        "type": "keyPress",
+        "key": "Ctrl+K"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1454,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1262",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 741,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            0,
+            52
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1263",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 741,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            0,
+            92
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1264",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1454,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1265",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1488,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            -414,
+            54
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1266",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 2060,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1267",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1513,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            0,
+            -346
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1268",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1499,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1269",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "navigate",
+          "dest": 362
+        }
+      ]
+    },
+    {
+      "source": "p1270",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1529,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1271",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1583,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1272",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1637,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1273",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1668,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1274",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1754,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1275",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1796,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1276",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1882,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1277",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1936,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1278",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1990,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1279",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 2060,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p28",
+      "trigger": {
+        "type": "keyPress",
+        "key": "Ctrl+K"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1454,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1280",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p1281",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1438,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            -186,
+            54
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1282",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1477,
+          "position": "manual",
+          "anchor": "triggerInside",
+          "offset": [
+            -348,
+            54
+          ],
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1283",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p1284",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "navigate",
+          "dest": 762
+        }
+      ]
+    },
+    {
+      "source": "p1285",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 951,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1286",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 978,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1287",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1010,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1288",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1042,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1289",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1074,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    },
+    {
+      "source": "p1290",
+      "trigger": {
+        "type": "onClick"
+      },
+      "actions": [
+        {
+          "type": "openOverlay",
+          "dest": 1106,
+          "position": "center",
+          "close_on_outside": true,
+          "background": "#17223833"
+        }
+      ]
+    }
+  ],
+  "commandCount": 1660,
+  "createdAt": "2026-11-05T04:17:16.679Z"
+}

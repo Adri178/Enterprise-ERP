@@ -1,0 +1,373 @@
+[
+  {
+    "command": "node.set",
+    "params": {
+      "ids": [
+        917
+      ],
+      "props": {
+        "characters": "Daftar Dokumen"
+      }
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        623
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        624
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        625
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        626
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        627
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        628
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        629
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        630
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        631
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        632
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        633
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        634
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        635
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        636
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        637
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        638
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        639
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        640
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        641
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        642
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        643
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        644
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        645
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        646
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        647
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        657
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        658
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        1467
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        1468
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        1469
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        1470
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        1471
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        2202
+      ],
+      "field": "visible",
+      "variable": "VariableID:3"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        1494
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        1495
+      ],
+      "field": "visible",
+      "variable": "VariableID:4"
+    }
+  },
+  {
+    "command": "variable.bind",
+    "params": {
+      "ids": [
+        2203
+      ],
+      "field": "visible",
+      "variable": "VariableID:3"
+    }
+  }
+]

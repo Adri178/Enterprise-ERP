@@ -1,0 +1,93 @@
+import assert from "node:assert/strict";
+import { randomUUID } from "node:crypto";
+import { config } from "dotenv";
+import { PrismaClient } from "@prisma/client";
+config({ path: new URL("../apps/api/.env", import.meta.url), quiet: true });
+if (process.env.NODE_ENV === "production") throw new Error("Development verification only");
+const prisma = new PrismaClient(), base = process.env.TEST_API_URL || "http://127.0.0.1:4010/api", code = `QM${Date.now().toString(36).toUpperCase()}`;
+let companyId, cookie = "", checks = 0;
+async function request(path, method = "GET", body, session = cookie) { return fetch(base + path, { method, headers: { "Content-Type": "application/json", ...(session ? { Cookie: session } : {}) }, ...(body ? { body: JSON.stringify(body) } : {}) }); }
+async function json(path, method = "GET", body, expected = 200, session = cookie) { const r = await request(path, method, body, session), data = await r.json(); assert.equal(r.status, expected, `${method} ${path}: ${JSON.stringify(data)}`); checks++; return data; }
+async function login(email) { const r = await request("/auth/login", "POST", { email, password: process.env.DEMO_PASSWORD }, ""); assert.equal(r.status, 201); return r.headers.get("set-cookie").split(";")[0]; }
+try {
+  cookie = await login("admin@enterprise.local"); const viewer = await login("viewer@enterprise.local"), manager = await login("reviewer@enterprise.local");
+  const company = await json("/companies", "POST", { code, name: "QA Manufacturing Disposable", industry: "Pengujian", city: "Jakarta", currency: "IDR", status: "ACTIVE", address: "", email: "", phone: "", taxId: "" }, 201); companyId = company.id;
+  const root = `/companies/${companyId}`, path = root + "/manufacturing";
+  for (const [email, role] of [["viewer@enterprise.local", "VIEWER"], ["reviewer@enterprise.local", "MANAGER"]]) { const user = await prisma.user.findUniqueOrThrow({ where: { email } }); await prisma.membership.create({ data: { userId: user.id, companyId, role } }); }
+  const master = (kind, code, extra = {}) => json(root + `/master/${kind}`, "POST", { code, name: `QA ${code}`, category: "Manufacturing", email: "", phone: "", description: "", status: "ACTIVE", ...extra }, 201);
+  const branch = await master("branches", "BR", { city: "Jakarta" }), warehouse = await master("warehouses", "WH", { branchId: branch.id });
+  const a = await master("items", "RAW-A", { unit: "pcs", purchasePrice: 0, sellingPrice: 0, trackStock: true, reorderLevel: 0 }), b = await master("items", "RAW-B", { unit: "pcs", purchasePrice: 0, sellingPrice: 0, trackStock: true, reorderLevel: 0 }), output = await master("items", "FG", { unit: "pcs", purchasePrice: 0, sellingPrice: 0, trackStock: true, reorderLevel: 0 }), nonStock = await master("items", "SERVICE", { unit: "pcs", trackStock: false, reorderLevel: 0 });
+  const bomInput = { code: "bom-qa", name: "QA assembly", outputItemId: output.id, outputQuantity: 2, description: "QA BOM", lines: [{ itemId: a.id, quantity: 1 }, { itemId: b.id, quantity: 1 }] };
+  const createBom = (body, expected = 201, session = cookie) => json(path + "/boms", "POST", body, expected, session);
+  const bomAction = (row, action, expected = 201, session = cookie) => json(path + `/boms/${row.id}/actions`, "POST", { action, expectedUpdatedAt: row.updatedAt }, expected, session);
+  let bom = await createBom(bomInput); assert.equal(bom.code, "BOM-QA");
+  await createBom(bomInput, 409); await createBom({ ...bomInput, code: "VIEWER" }, 403, viewer);
+  await createBom({ ...bomInput, code: "BAD", outputItemId: a.id }, 400);
+  await createBom({ ...bomInput, code: "BAD", lines: [bomInput.lines[0], bomInput.lines[0]] }, 400);
+  await createBom({ ...bomInput, code: "BAD", lines: [{ itemId: nonStock.id, quantity: 1 }] }, 400);
+  const foreignItem = await prisma.item.findFirstOrThrow({ where: { companyId: "beta" } }), foreignBom = await prisma.billOfMaterials.findFirstOrThrow({ where: { companyId: "beta", status: "ACTIVE" } }), foreignWarehouse = await prisma.warehouse.findFirstOrThrow({ where: { companyId: "beta" } });
+  await createBom({ ...bomInput, code: "BAD", outputItemId: foreignItem.id }, 400);
+  await assert.rejects(() => prisma.bomLine.update({ where: { id: bom.lines[0].id }, data: { itemId: foreignItem.id } }));
+  await assert.rejects(() => prisma.bomLine.update({ where: { id: bom.lines[0].id }, data: { itemId: output.id } }));
+  await assert.rejects(() => prisma.bomLine.deleteMany({ where: { companyId, bomId: bom.id } }));
+  await json(path + `/boms/${bom.id}`, "PATCH", { ...bomInput, expectedUpdatedAt: bom.updatedAt, code: "OTHER" }, 409);
+  const old = bom; bom = await json(path + `/boms/${bom.id}`, "PATCH", { ...bomInput, name: "QA edited assembly", expectedUpdatedAt: bom.updatedAt });
+  await json(path + `/boms/${bom.id}`, "PATCH", { ...bomInput, expectedUpdatedAt: old.updatedAt }, 409);
+  await json(root + `/master/items/${a.id}`, "PATCH", { ...a, unit: "kg", expectedUpdatedAt: a.updatedAt }, 409);
+  await json(root + `/master/items/${output.id}`, "PATCH", { ...output, trackStock: false, expectedUpdatedAt: output.updatedAt }, 409);
+  assert.equal((await request(root + `/master/items/${a.id}`, "DELETE")).status, 409);
+  assert.equal((await request(root + `/master/items/${output.id}`, "DELETE")).status, 409);
+  const input = (batches = 1) => ({ requestKey: randomUUID(), bomId: bom.id, batches, warehouseId: warehouse.id, date: "2026-10-01", description: "QA production" });
+  const create = (body = input(), expected = 201, session = cookie) => json(path + "/work-orders", "POST", body, expected, session);
+  const action = (row, action, expected = 201, postingDate = "2026-10-02", session = cookie) => json(path + `/work-orders/${row.id}/actions`, "POST", { action, expectedUpdatedAt: row.updatedAt, ...(action === "complete" ? { postingDate } : {}) }, expected, session);
+  await create(input(), 400); await bomAction(bom, "activate", 403, viewer); bom = await bomAction(bom, "activate", 201, manager);
+  await json(path + `/boms/${bom.id}`, "PATCH", { ...bomInput, expectedUpdatedAt: bom.updatedAt }, 409);
+  await create({ ...input(), bomId: foreignBom.id }, 400); await create({ ...input(), warehouseId: foreignWarehouse.id }, 400); await create(input(1000000), 400); await create(input(), 403, viewer);
+  const keyInput = input(); let first = await create({ ...keyInput, companyId: "beta" }); assert.equal(first.companyId, companyId); assert.equal((await create(keyInput)).id, first.id); await create({ ...keyInput, batches: 2 }, 409);
+  const profile = await json("/auth/me"); assert.equal(profile.companies.find((c) => c.id === companyId).currencyLocked, true);
+  await json(root, "PATCH", { ...company, currency: "USD", expectedUpdatedAt: company.updatedAt }, 409);
+  let second = await create(), third = await create(), blockedDraft = await create(), cancelled = await create(); cancelled = await action(cancelled, "cancel"); await action(cancelled, "release", 409);
+  const releaseRace = await Promise.all([request(path + `/work-orders/${first.id}/actions`, "POST", { action: "release", expectedUpdatedAt: first.updatedAt }), request(path + `/work-orders/${first.id}/actions`, "POST", { action: "release", expectedUpdatedAt: first.updatedAt })]); assert.deepEqual(releaseRace.map((r) => r.status).sort(), [201, 409]); first = await json(path + `/work-orders/${first.id}`);
+  second = await action(second, "release"); third = await action(third, "release"); await action(first, "complete", 403, "2026-10-02", viewer);
+  assert.equal(await prisma.stockLedger.count({ where: { companyId } }), 0);
+  const emptyPlan = await json(path + "/plan?from=2026-10-01&to=2026-10-01&pageSize=1"); assert.equal(emptyPlan.orders, 3); assert.equal(emptyPlan.meta.total, 2); assert.equal(emptyPlan.data[0].required, "3"); assert.equal(emptyPlan.data[0].shortage, "3");
+  await action(first, "complete", 409); assert.equal((await json(path + `/work-orders/${first.id}`)).status, "RELEASED");
+  const receive = async (lines, date = "2026-10-01") => { const row = await json(root + "/stock/operations", "POST", { requestKey: randomUUID(), kind: "ADJUSTMENT", date, warehouseId: warehouse.id, targetWarehouseId: "", description: "QA material receipt", lines }, 201); return json(root + `/stock/operations/${row.id}/actions`, "POST", { action: "post", expectedUpdatedAt: row.updatedAt }, 201); };
+  await receive([{ itemId: a.id, quantity: 2, unitPrice: 3.33 }, { itemId: b.id, quantity: 2, unitPrice: 2 }]); await receive([{ itemId: a.id, quantity: 1, unitPrice: 3.34 }]);
+  const before = await prisma.stockBalance.aggregate({ where: { companyId }, _sum: { value: true } });
+  const completeRace = await Promise.all([request(path + `/work-orders/${first.id}/actions`, "POST", { action: "complete", postingDate: "2026-10-02", expectedUpdatedAt: first.updatedAt }), request(path + `/work-orders/${first.id}/actions`, "POST", { action: "complete", postingDate: "2026-10-02", expectedUpdatedAt: first.updatedAt })]); assert.deepEqual(completeRace.map((r) => r.status).sort(), [201, 409]);
+  first = await json(path + `/work-orders/${first.id}`); assert.equal(first.amount, 5.33); assert.equal(first.outputQuantity, 2); assert.equal(first.lines.find((l) => l.itemId === a.id).cost, 3.33);
+  assert.equal(await prisma.stockLedger.count({ where: { companyId, workOrderId: first.id } }), 3); assert.equal(await prisma.auditLog.count({ where: { companyId, entityId: first.id, action: "COMPLETE" } }), 1);
+  assert.equal((await prisma.stockBalance.aggregate({ where: { companyId }, _sum: { value: true } }))._sum.value.toFixed(2), before._sum.value.toFixed(2));
+  await action(first, "complete", 409); await action(first, "cancel", 409);
+  const outputLedger = await prisma.stockLedger.findFirstOrThrow({ where: { companyId, workOrderId: first.id, itemId: output.id } });
+  await assert.rejects(() => prisma.stockLedger.update({ where: { id: outputLedger.id }, data: { value: 999 } }));
+  await assert.rejects(() => prisma.workOrder.update({ where: { id: first.id }, data: { amount: 999 } }));
+  await assert.rejects(() => prisma.workOrderLine.update({ where: { id: first.lines[0].id }, data: { cost: null } }));
+  const competing = await Promise.all([request(path + `/work-orders/${second.id}/actions`, "POST", { action: "complete", postingDate: "2026-10-02", expectedUpdatedAt: second.updatedAt }), request(path + `/work-orders/${third.id}/actions`, "POST", { action: "complete", postingDate: "2026-10-02", expectedUpdatedAt: third.updatedAt })]); assert.deepEqual(competing.map((r) => r.status).sort(), [201, 409]);
+  second = await json(path + `/work-orders/${second.id}`); third = await json(path + `/work-orders/${third.id}`); let waiting = second.status === "RELEASED" ? second : third; assert.equal((second.status === "COMPLETED" ? second : third).amount, 5.34);
+  const snapshot = async () => JSON.stringify(await Promise.all([prisma.stockBalance.findMany({ where: { companyId }, orderBy: { id: "asc" } }), prisma.stockLedger.count({ where: { companyId } }), prisma.auditLog.count({ where: { companyId } }), prisma.workOrder.findUnique({ where: { id: waiting.id }, include: { lines: true } })]));
+  const failedBefore = await snapshot(); await action(waiting, "complete", 409); assert.equal(await snapshot(), failedBefore);
+  const plan = await json(path + "/plan?from=2026-10-01&to=2026-10-01"); assert.equal(plan.orders, 1); assert.equal(plan.data.find((r) => r.itemId === b.id).shortage, "1"); assert.equal(plan.data.find((r) => r.itemId === a.id).shortage, "0");
+  const page2 = await json(path + "/plan?from=2026-10-01&to=2026-10-01&pageSize=1&page=999"); assert.equal(page2.meta.page, 2);
+  await json(path + `/plan?from=2026-10-01&to=2026-10-01&warehouseId=${foreignWarehouse.id}`, "GET", undefined, 404);
+  assert.equal((await json(path + "/plan?from=2026-09-01&to=2026-09-30")).orders, 0);
+  bom = await bomAction(bom, "retire"); await create(input(), 400); await action(blockedDraft, "release", 409); await action(blockedDraft, "cancel"); await bomAction(bom, "activate", 409);
+  await receive([{ itemId: b.id, quantity: 1, unitPrice: 2 }], "2026-10-03"); await action(waiting, "complete", 409, "2026-10-02"); waiting = await action(waiting, "complete", 201, "2026-10-03", manager); assert.equal(waiting.amount, 5.33);
+  const balances = await prisma.stockBalance.findMany({ where: { companyId } }); assert.equal(balances.find((r) => r.itemId === a.id).quantity, 0); assert.equal(balances.find((r) => r.itemId === a.id).value.toFixed(2), "0.00"); assert.equal(balances.find((r) => r.itemId === output.id).quantity, 6); assert.equal(balances.find((r) => r.itemId === output.id).value.toFixed(2), "16.00");
+  const ledgerRows = await json(root + `/stock/ledger?itemId=${output.id}`); assert.equal(ledgerRows.data.length, 3); assert.ok(ledgerRows.data.every((r) => r.documentKind === "WORK_ORDER" && r.documentNumber.startsWith("WO-")));
+  assert.equal((await request(root + `/master/warehouses/${warehouse.id}`, "DELETE")).status, 409);
+  await json(path + `/boms/${foreignBom.id}`, "GET", undefined, 404); await json(path + `/work-orders/${(await prisma.workOrder.findFirstOrThrow({ where: { companyId: "beta" } })).id}`, "GET", undefined, 404);
+  await json(path + "/summary", "GET", undefined, 401, ""); await json("/companies/beta/manufacturing/summary", "GET", undefined, 403, viewer);
+  const auditCount = await prisma.auditLog.count({ where: { companyId } });
+  assert.equal((await json(path + "/work-orders?status=COMPLETED&q=QA&pageSize=1&page=99", "GET", undefined, 200, viewer)).meta.page, 3);
+  await json(path + "/work-orders?pageSize=101", "GET", undefined, 400); await json(path + "/plan?from=2026-10-31&to=2026-10-01", "GET", undefined, 400); await json(path + "/boms?q=QA&status=INACTIVE", "GET", undefined, 200, viewer);
+  assert.equal(await prisma.auditLog.count({ where: { companyId } }), auditCount);
+  await request(root, "DELETE"); await create(input(), 403); assert.equal((await json(path + "/summary")).completed, 3);
+  console.log(`Manufacturing passed (${checks} HTTP expectations): scoped BOM/FKs, recipe immutability, version races, batch bounds, idempotency, currency locks, released demand planning, atomic shortage rollback, concurrent completions, exact residual cost/conservation, database ledger checks, source drill-down, Roles, protected masters, archived history and audit.`);
+} finally {
+  if (companyId) {
+    assert.equal((await prisma.company.findUnique({ where: { id: companyId } }))?.code, code);
+    await prisma.$transaction(async (tx) => { await tx.stockLedger.deleteMany({ where: { companyId } }); await tx.stockBalance.deleteMany({ where: { companyId } }); await tx.workOrderLine.deleteMany({ where: { companyId } }); await tx.workOrder.deleteMany({ where: { companyId } }); await tx.bomLine.deleteMany({ where: { companyId } }); await tx.billOfMaterials.deleteMany({ where: { companyId } }); await tx.stockOperationLine.deleteMany({ where: { companyId } }); await tx.stockOperation.deleteMany({ where: { companyId } }); await tx.documentSequence.deleteMany({ where: { companyId } }); await tx.masterRecord.deleteMany({ where: { companyId, kind: "warehouses" } }); await tx.masterRecord.deleteMany({ where: { companyId } }); await tx.auditLog.deleteMany({ where: { companyId } }); await tx.membership.deleteMany({ where: { companyId } }); await tx.company.delete({ where: { id: companyId } }); });
+  } await prisma.$disconnect();
+}
